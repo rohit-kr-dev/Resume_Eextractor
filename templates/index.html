@@ -3,330 +3,560 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Parser</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Resume Extractor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fb;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
         }
-        
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 2rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(60,72,88,0.12);
+            padding: 2.5rem 2rem 2rem 2rem;
         }
-        
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2a3b5d;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .header p {
+            color: #6c7a89;
+            font-size: 1.15rem;
+            margin: 0;
+        }
         .upload-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
         }
-        
-        .results-section {
-            max-height: 70vh;
-            overflow-y: auto;
-            padding-right: 1rem;
+        .upload-form {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            background: #f8fafd;
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(60,72,88,0.06);
         }
-        
-        .resume-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .upload-form input[type="file"] {
+            font-size: 1rem;
+            border: none;
+            background: none;
         }
-        
-        .resume-header {
+        .upload-form button {
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(60,72,88,0.08);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .upload-form button:hover {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            box-shadow: 0 4px 16px rgba(60,72,88,0.12);
+        }
+        #results {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        .result-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(60,72,88,0.10);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            border: 1px solid #e6eaf3;
+            transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+            position: relative;
+        }
+        .result-card:hover {
+            box-shadow: 0 8px 32px rgba(60,72,88,0.16);
+            border: 1.5px solid #3a7bd5;
+            transform: translateY(-4px) scale(1.01);
+        }
+        .result-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e6eaf3;
+            padding-bottom: 0.75rem;
         }
-        
-        .resume-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2c3e50;
+        .result-header h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #2a3b5d;
+            margin: 0;
         }
-        
-        .resume-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .result-actions {
+            display: flex;
+            gap: 0.5rem;
         }
-        
-        .info-section {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-        
-        .info-section h3 {
+        .action-btn {
+            background: #f4f6fb;
+            color: #3a7bd5;
+            border: none;
+            border-radius: 6px;
+            padding: 0.5rem 0.9rem;
             font-size: 1.1rem;
-            color: #2c3e50;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(60,72,88,0.08);
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .action-btn:hover {
+            background: #3a7bd5;
+            color: #fff;
+        }
+        .result-section {
+            background: #f8fafd;
+            border-radius: 10px;
+            padding: 1.1rem 1rem 1rem 1rem;
+            box-shadow: 0 1px 4px rgba(60,72,88,0.04);
             margin-bottom: 0.5rem;
         }
-        
+        .result-section h4 {
+            color: #3a7bd5;
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.7rem;
+        }
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 0.5rem;
+            gap: 0.5rem;
+            color: #2a3b5d;
+            font-size: 1rem;
         }
-        
-        .info-item i {
-            width: 20px;
-            margin-right: 0.5rem;
-            color: #6c757d;
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
-        
+        .skill-tag {
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+            color: #fff;
+            padding: 0.4rem 1.1rem;
+            border-radius: 20px;
+            font-size: 0.98rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 4px rgba(60,72,88,0.08);
+        }
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .experience-item {
+            background: #fff;
+            border-radius: 8px;
+            padding: 0.7rem 1rem;
+            border: 1px solid #e6eaf3;
+            box-shadow: 0 1px 4px rgba(60,72,88,0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            color: #2a3b5d;
+            font-weight: 500;
+        }
+        .duration {
+            color: #6c7a89;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
         .atc-score {
-            background: #e9ecef;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
+            background: #eaf6ff;
+            border: 1.5px solid #b3e0ff;
         }
-        
-        .progress {
-            height: 10px;
-            margin: 0.5rem 0;
+        .score-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
-        
-        .alert {
-            margin-bottom: 1rem;
-        }
-        
-        .download-section {
-            position: sticky;
-            bottom: 0;
-            background: white;
-            padding: 1rem;
-            border-top: 1px solid #eee;
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        .custom-file-upload {
-            border: 2px dashed #6c757d;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .custom-file-upload:hover {
-            border-color: #0d6efd;
-            background-color: #f8f9fa;
-        }
-        
-        .custom-file-upload i {
+        .score-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             font-size: 2rem;
-            color: #6c757d;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(60,72,88,0.10);
         }
-        
-        #fileList {
-            margin-top: 1rem;
-            text-align: left;
+        .score-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 400;
         }
-        
-        .file-item {
+        .score-breakdown {
+            flex-grow: 1;
+        }
+        .breakdown-item {
             display: flex;
             align-items: center;
-            padding: 0.5rem;
-            background: #f8f9fa;
-            border-radius: 4px;
+            gap: 1rem;
             margin-bottom: 0.5rem;
         }
-        
-        .file-item i {
-            margin-right: 0.5rem;
-            color: #6c757d;
+        .breakdown-item .label {
+            width: 120px;
+            color: #6c7a89;
+            font-size: 0.98rem;
+        }
+        .progress-bar {
+            flex-grow: 1;
+            height: 8px;
+            background: #e6eaf3;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        .breakdown-item .value {
+            width: 40px;
+            text-align: right;
+            color: #6c7a89;
+            font-size: 0.98rem;
+        }
+        .error-message {
+            background-color: #fee;
+            color: #c00;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 4px;
+            border: 1px solid #fcc;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .error-message i {
+            color: #c00;
+        }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 1.2rem;
+            }
+            #results {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 0;
+                padding: 0.5rem;
+            }
+            .header {
+                padding: 1rem 0.5rem;
+            }
+            .upload-section,
+            .result-section {
+                padding: 1rem 0.5rem;
+            }
+            .result-card {
+                padding: 1rem 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="header">
+            <h1>Resume Extractor</h1>
+            <p>Upload your resume to extract key information</p>
+        </div>
+
         <div class="upload-section">
-            <h2 class="text-center mb-4">Resume Parser</h2>
-            
-            {% if error %}
-            <div class="alert alert-danger" role="alert">
-                <i class="fas fa-exclamation-circle"></i>
-                {{ error }}
-            </div>
-            {% endif %}
-            
-            {% if success_messages %}
-            <div class="alert alert-success" role="alert">
-                <i class="fas fa-check-circle"></i>
-                {% for message in success_messages %}
-                <div>{{ message }}</div>
-                {% endfor %}
-            </div>
-            {% endif %}
-            
-            <form method="post" enctype="multipart/form-data" id="uploadForm">
-                <div class="mb-3">
-                    <label for="files" class="form-label">Select Resume Files</label>
-                    <input type="file" class="form-control" id="files" name="files[]" multiple accept=".pdf,.docx" required>
-                    <div class="form-text">Supported formats: PDF, DOCX</div>
-                </div>
-                <div id="fileList" class="mb-3"></div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-upload"></i> Upload Resumes
-                    </button>
-                </div>
+            <form class="upload-form" method="POST" enctype="multipart/form-data">
+                <input type="file" name="resumes" id="resumeInput" multiple required>
+                <button type="submit">Upload Resumes</button>
             </form>
         </div>
-        
-        {% if resumes %}
-        <div class="results-section">
-            {% for resume in resumes %}
-            <div class="resume-card">
-                <div class="resume-header">
-                    <div class="resume-title">{{ resume.filename }}</div>
-                    <div class="atc-badge">
-                        <span class="badge bg-primary">ATC Score: {{ resume.atc_score.total }}/{{ resume.atc_score.max }}</span>
-                    </div>
-                </div>
-                
-                <div class="resume-content">
-                    <div class="info-section">
-                        <h3><i class="fas fa-user"></i> Personal Information</h3>
-                        {% if resume.data.name %}
-                        <div class="info-item">
-                            <i class="fas fa-user"></i>
-                            <span>{{ resume.data.name }}</span>
-                        </div>
-                        {% endif %}
-                        {% if resume.data.email %}
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>{{ resume.data.email }}</span>
-                        </div>
-                        {% endif %}
-                        {% if resume.data.phone %}
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>{{ resume.data.phone }}</span>
-                        </div>
-                        {% endif %}
-                        {% if resume.data.dob %}
-                        <div class="info-item">
-                            <i class="fas fa-calendar"></i>
-                            <span>{{ resume.data.dob }}</span>
-                        </div>
-                        {% endif %}
-                        {% if resume.data.address %}
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>{{ resume.data.address }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        {% if resume.data.education %}
-                        <div class="info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>{{ resume.data.education }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                        {% if resume.data.experience %}
-                        <div class="info-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>{{ resume.data.experience }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3><i class="fas fa-tools"></i> Skills</h3>
-                        {% if resume.data.skills %}
-                        <div class="info-item">
-                            <i class="fas fa-tools"></i>
-                            <span>{{ resume.data.skills }}</span>
-                        </div>
-                        {% endif %}
-                    </div>
-                    
-                    <div class="info-section">
-                        <h3><i class="fas fa-chart-line"></i> ATC Score Breakdown</h3>
-                        <div class="atc-score">
-                            <div class="info-item">
-                                <i class="fas fa-user-circle"></i>
-                                <span>Personal Info: {{ resume.atc_score.personal_info }}/30</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.personal_info/30)*100 }}%"></div>
-                            </div>
-                            
-                            <div class="info-item">
-                                <i class="fas fa-briefcase"></i>
-                                <span>Skills & Experience: {{ resume.atc_score.skills_experience }}/40</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.skills_experience/40)*100 }}%"></div>
-                            </div>
-                            
-                            <div class="info-item">
-                                <i class="fas fa-plus-circle"></i>
-                                <span>Additional Info: {{ resume.atc_score.additional_info }}/30</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.additional_info/30)*100 }}%"></div>
+
+        <div id="results">
+            {% if data and data|length > 0 %}
+                {% for result in data %}
+                    <div class="result-card" data-result-index="{{ loop.index0 }}" data-filters="{{ result.first_name|lower }} {{ result.last_name|lower }} {{ result.email|lower }} {{ result.phone|lower }} {{ result.dob|lower }} {{ result.city|lower }} {{ result.state|lower }} {{ result.country|lower }} {{ result.skills|join(' ')|lower }} {{ result.languages|map(attribute='language')|join(' ')|lower }} {{ result.certifications|map(attribute='name')|join(' ')|lower }} {{ result.projects|map(attribute='name')|join(' ')|lower }} {{ result.work_experience|map(attribute='company')|join(' ')|lower }} {{ result.achievements|join(' ')|lower }} {{ result.publications|join(' ')|lower }} {{ result.volunteer_experience|join(' ')|lower }}">
+                        <div class="result-header">
+                            <h3>{{ result.first_name }} {{ result.last_name }}</h3>
+                            <div class="result-actions">
+                                <button class="action-btn" onclick="exportToCSV(this)">
+                                    <i class="fas fa-print"></i> Export CSV
+                                </button>
                             </div>
                         </div>
+                        <div class="result-section">
+                            <h4><i class="fas fa-user"></i> Personal Information</h4>
+                            <div class="info-grid">
+                                {% if result.email %}
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>{{ result.email }}</span>
+                                </div>
+                                {% endif %}
+                                {% if result.phone %}
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>{{ result.phone }}</span>
+                                </div>
+                                {% endif %}
+                                {% if result.dob %}
+                                <div class="info-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>{{ result.dob }}</span>
+                                </div>
+                                {% endif %}
+                                {% if result.city %}
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>{{ result.city }}</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% if result.skills and result.skills|length > 0 %}
+                        <div class="result-section">
+                            <h4><i class="fas fa-tools"></i> Skills</h4>
+                            <div class="skills-list">
+                                {% for skill in result.skills %}
+                                <span class="skill-tag">{{ skill }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if result.experience and result.experience|length > 0 %}
+                        <div class="result-section">
+                            <h4><i class="fas fa-briefcase"></i> Experience</h4>
+                            <div class="experience-list">
+                                {% for exp in result.experience %}
+                                <div class="experience-item">
+                                    <div class="experience-header">
+                                        <h5>{{ exp.domain or '' }}</h5>
+                                        <span class="duration">{{ exp.years or '' }} years</span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if result.hobbies %}
+                        <div class="result-section">
+                            <h4><i class="fas fa-heart"></i> Hobbies & Interests</h4>
+                            <p>{{ result.hobbies }}</p>
+                        </div>
+                        {% endif %}
+                        {% if result.atc_score %}
+                        <div class="result-section atc-score">
+                            <h4><i class="fas fa-chart-line"></i> ATC Score</h4>
+                            <div class="score-container">
+                                <div class="score-circle">
+                                    <span class="score">{{ result.atc_score.score }}</span>
+                                    <span class="score-label">ATC Score</span>
+                                </div>
+                                <div class="score-breakdown">
+                                    {% for key, value in result.atc_score.details.items() %}
+                                    <div class="breakdown-item">
+                                        <span class="label">{{ key.replace('_', ' ').upper() }}</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: {{ value }}%"></div>
+                                        </div>
+                                        <span class="value">{{ value }}%</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
                     </div>
-                </div>
-            </div>
-            {% endfor %}
+                {% endfor %}
+            {% else %}
+                <div class="no-results">No results to display</div>
+            {% endif %}
         </div>
-        
-        <div class="download-section">
-            <a href="{{ url_for('download_file', filename=csv_filename) }}" class="btn btn-success">
-                <i class="fas fa-download"></i> Download CSV Report
-            </a>
-        </div>
-        {% endif %}
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Handle file selection
-        document.getElementById('files').addEventListener('change', function(e) {
-            const fileList = document.getElementById('fileList');
-            fileList.innerHTML = '';
-            
-            if (this.files.length > 0) {
-                const fileListContainer = document.createElement('div');
-                fileListContainer.className = 'list-group';
-                
-                Array.from(this.files).forEach(file => {
-                    const fileItem = document.createElement('div');
-                    fileItem.className = 'list-group-item';
-                    fileItem.innerHTML = `
-                        <i class="fas fa-file me-2"></i>
-                        ${file.name}
-                    `;
-                    fileListContainer.appendChild(fileItem);
+
+        <script>
+            function exportToCSV(button) {
+                // Find the closest result card
+                const card = button.closest('.result-card');
+                // Extract data from the card's dataset or from a JS variable if available
+                // For simplicity, assume each card has a data-result-index attribute
+                const index = card.getAttribute('data-result-index');
+                const results = {{ data|tojson|safe }};
+                const result = results[index];
+                const data = {
+                    first_name: result.first_name,
+                    last_name: result.last_name,
+                    email: result.email,
+                    phone: result.phone,
+                    dob: result.dob,
+                    city: result.city,
+                    skills: result.skills,
+                    hobbies: result.hobbies,
+                    experience: result.experience
+                };
+
+                fetch('/export-csv', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `resume_data_${new Date().toISOString().slice(0,19).replace(/[:]/g, '')}.csv`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    a.remove();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error exporting data. Please try again.');
                 });
-                
-                fileList.appendChild(fileListContainer);
             }
-        });
-    </script>
+
+            function showATCScore() {
+                document.getElementById('atcScoreModal').style.display = 'block';
+            }
+
+            function hideATCScore() {
+                document.getElementById('atcScoreModal').style.display = 'none';
+            }
+
+            function showFilterModal() {
+                document.getElementById('filterModal').style.display = 'block';
+            }
+
+            function hideFilterModal() {
+                document.getElementById('filterModal').style.display = 'none';
+            }
+
+            function applyFilters(event) {
+                event.preventDefault();
+                const form = event.target;
+                const selectedFilters = Array.from(form.querySelectorAll('input[name="filters"]:checked')).map(input => input.value);
+                
+                // Get all result cards
+                const resultCards = document.querySelectorAll('.result-card');
+                
+                // Hide all result cards first
+                resultCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+
+                // Show cards that match the selected filters
+                resultCards.forEach(card => {
+                    const cardFilters = card.getAttribute('data-filter').split(' ');
+                    // Check if any of the card's filters are in the selected filters
+                    if (cardFilters.some(filter => selectedFilters.includes(filter))) {
+                        card.style.display = 'block';
+                        
+                        // Hide individual items that aren't selected
+                        const items = card.querySelectorAll('.result-item');
+                        items.forEach(item => {
+                            const itemFilter = item.getAttribute('data-filter');
+                            if (itemFilter && !selectedFilters.includes(itemFilter)) {
+                                item.style.display = 'none';
+                            } else {
+                                item.style.display = 'block';
+                            }
+                        });
+                    }
+                });
+
+                hideFilterModal();
+            }
+
+            // Close modals when clicking outside
+            window.onclick = function(event) {
+                const filterModal = document.getElementById('filterModal');
+                const atcScoreModal = document.getElementById('atcScoreModal');
+                
+                if (event.target == filterModal) {
+                    filterModal.style.display = 'none';
+                }
+                if (event.target == atcScoreModal) {
+                    atcScoreModal.style.display = 'none';
+                }
+            }
+
+            // Initialize filters on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                const filterForm = document.getElementById('filterForm');
+                if (filterForm) {
+                    // Trigger the filter form submission to show all items initially
+                    const event = new Event('submit');
+                    filterForm.dispatchEvent(event);
+                }
+            });
+        </script>
+    </div>
+
+    <!-- Add this right after the <body> tag -->
+    {% if error %}
+    <div class="error-message">
+        <i class="fas fa-exclamation-circle"></i>
+        {{ error }}
+    </div>
+    {% endif %}
 </body>
 </html>

@@ -11,7 +11,6 @@ import spacy
 from utils.parser import extract_name, extract_email, extract_phone, extract_skills, extract_experience, extract_city
 import csv
 import io
-import traceback
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -434,397 +433,226 @@ def calculate_atc_score(data):
     score = 0
     max_score = 100
     
-    # Personal Information (30 points)
-    if data['name']: score += 5
-    if data['email']: score += 5
-    if data['phone']: score += 5
-    if data['dob']: score += 5
-    if data['city'] or data['state'] or data['country']: score += 5
-    if data['address']: score += 5
+    # Personal Information (20 points)
+    if data.get('first_name') and data.get('last_name'):
+        score += 5
+    if data.get('email'):
+        score += 5
+    if data.get('phone'):
+        score += 5
+    if data.get('city'):
+        score += 5
     
-    # Skills and Experience (40 points)
-    if data['skills']: score += 15
-    if data['experience']: score += 15
-    if data['work_experience']: score += 10
+    # Skills (30 points)
+    skills = data.get('skills', [])
+    if len(skills) >= 5:
+        score += 15
+    elif len(skills) >= 3:
+        score += 10
+    elif len(skills) >= 1:
+        score += 5
     
-    # Additional Information (30 points)
-    if data['education']: score += 10
-    if data['languages']: score += 5
-    if data['certifications']: score += 5
-    if data['projects']: score += 5
-    if data['summary']: score += 5
+    # Experience (40 points)
+    experience = data.get('experience', [])
+    if len(experience) >= 3:
+        score += 20
+    elif len(experience) >= 2:
+        score += 15
+    elif len(experience) >= 1:
+        score += 10
+    
+    # Additional Information (10 points)
+    if data.get('hobbies'):
+        score += 5
+    if data.get('dob'):
+        score += 5
+    
+    # Calculate percentage
+    percentage = (score / max_score) * 100
     
     return {
-        'total': score,
-        'max': max_score,
-        'percentage': (score / max_score) * 100,
-        'personal_info': 30 if all([data['name'], data['email'], data['phone'], data['dob'], data['city'] or data['state'] or data['country'], data['address']]) else 0,
-        'skills_experience': 40 if all([data['skills'], data['experience'], data['work_experience']]) else 0,
-        'additional_info': 30 if all([data['education'], data['languages'], data['certifications'], data['projects'], data['summary']]) else 0
+        'score': score,
+        'max_score': max_score,
+        'percentage': round(percentage, 1),
+        'details': {
+            'personal_info': 20 if all([data.get('first_name'), data.get('last_name'), data.get('email'), data.get('phone'), data.get('city')]) else 0,
+            'skills': 30 if len(skills) >= 5 else (20 if len(skills) >= 3 else (10 if len(skills) >= 1 else 0)),
+            'experience': 40 if len(experience) >= 3 else (30 if len(experience) >= 2 else (20 if len(experience) >= 1 else 0)),
+            'additional': 10 if data.get('hobbies') and data.get('dob') else (5 if data.get('hobbies') or data.get('dob') else 0)
+        }
     }
 
-def extract_resume_data(text):
+def extract_resume_data(file):
+    filename = file.filename.lower()
+    if filename.endswith('.pdf'):
+        text = read_pdf(file)
+    elif filename.endswith('.docx'):
+        text = read_docx(file)
+    else:
+        raise ValueError("Unsupported file type. Please upload PDF or DOCX.")
+
+    text_lower = text.lower()
+
+    first_name, last_name = extract_name(text)
+    experience, _ = extract_experience(text)
+    dob = extract_dob(text_lower)
+    phone = extract_phone(text_lower)
+    email = extract_email(text_lower)
+    city = extract_city(text_lower)
+    hobbies = extract_hobbies(text_lower)
+    skill_list = load_skill_list()
+    skills = extract_skills(text_lower, skill_list)
+
     data = {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'dob': '',
-        'city': '',
-        'state': '',
-        'country': '',
-        'address': '',
-        'education': '',
-        'skills': '',
-        'experience': '',
-        'languages': '',
-        'certifications': '',
-        'projects': '',
-        'summary': '',
-        'hobbies': '',
-        'work_experience': '',
-        'achievements': '',
-        'publications': '',
-        'volunteer_experience': '',
-        'references': ''
+        'first_name': first_name.title(),
+        'last_name': last_name.title(),
+        'experience': experience,
+        'dob': dob,
+        'phone': phone,
+        'email': email,
+        'city': city,
+        'hobbies': hobbies,
+        'skills': skills
     }
-    
-    try:
-        # Name extraction
-        name_patterns = [
-            r'Name:\s*([^\n]+)',
-            r'Full Name:\s*([^\n]+)',
-            r'^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)',
-            r'^([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s*[-–]'
-        ]
-        
-        for pattern in name_patterns:
-            match = re.search(pattern, text, re.MULTILINE)
-            if match:
-                data['name'] = match.group(1).strip()
-                break
-        
-        # Email extraction
-        email_pattern = r'[\w\.-]+@[\w\.-]+\.\w+'
-        email_match = re.search(email_pattern, text)
-        if email_match:
-            data['email'] = email_match.group(0)
-        
-        # Phone extraction
-        phone_patterns = [
-            r'Phone:\s*([+\d\s-()]+)',
-            r'Mobile:\s*([+\d\s-()]+)',
-            r'Contact:\s*([+\d\s-()]+)',
-            r'[+\d\s-()]{10,}'
-        ]
-        
-        for pattern in phone_patterns:
-            match = re.search(pattern, text)
-            if match:
-                data['phone'] = match.group(1) if len(match.groups()) > 0 else match.group(0)
-                break
-        
-        # Date of Birth extraction
-        dob_patterns = [
-            r'DOB:\s*(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})',
-            r'Date of Birth:\s*(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})',
-            r'Birth Date:\s*(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})'
-        ]
-        
-        for pattern in dob_patterns:
-            match = re.search(pattern, text)
-            if match:
-                data['dob'] = match.group(1)
-                break
-        
-        # Address components extraction
-        city_pattern = r'City:\s*([^\n,]+)'
-        state_pattern = r'State:\s*([^\n,]+)'
-        country_pattern = r'Country:\s*([^\n,]+)'
-        address_pattern = r'Address:\s*([^\n]+)'
-        
-        city_match = re.search(city_pattern, text)
-        state_match = re.search(state_pattern, text)
-        country_match = re.search(country_pattern, text)
-        address_match = re.search(address_pattern, text)
-        
-        if city_match:
-            data['city'] = city_match.group(1).strip()
-        if state_match:
-            data['state'] = state_match.group(1).strip()
-        if country_match:
-            data['country'] = country_match.group(1).strip()
-        if address_match:
-            data['address'] = address_match.group(1).strip()
-        
-        # Education extraction
-        education_patterns = [
-            r'Education:([^#]+)',
-            r'Academic Background:([^#]+)',
-            r'Educational Background:([^#]+)'
-        ]
-        
-        for pattern in education_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['education'] = match.group(1).strip()
-                break
-        
-        # Skills extraction
-        skills_patterns = [
-            r'Skills:([^#]+)',
-            r'Technical Skills:([^#]+)',
-            r'Core Competencies:([^#]+)'
-        ]
-        
-        for pattern in skills_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['skills'] = match.group(1).strip()
-                break
-        
-        # Experience extraction
-        experience_patterns = [
-            r'Experience:([^#]+)',
-            r'Work Experience:([^#]+)',
-            r'Professional Experience:([^#]+)'
-        ]
-        
-        for pattern in experience_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['experience'] = match.group(1).strip()
-                break
-        
-        # Languages extraction
-        languages_patterns = [
-            r'Languages:([^#]+)',
-            r'Language Proficiency:([^#]+)'
-        ]
-        
-        for pattern in languages_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['languages'] = match.group(1).strip()
-                break
-        
-        # Certifications extraction
-        certifications_patterns = [
-            r'Certifications:([^#]+)',
-            r'Certificates:([^#]+)'
-        ]
-        
-        for pattern in certifications_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['certifications'] = match.group(1).strip()
-                break
-        
-        # Projects extraction
-        projects_patterns = [
-            r'Projects:([^#]+)',
-            r'Project Experience:([^#]+)'
-        ]
-        
-        for pattern in projects_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['projects'] = match.group(1).strip()
-                break
-        
-        # Summary extraction
-        summary_patterns = [
-            r'Summary:([^#]+)',
-            r'Professional Summary:([^#]+)',
-            r'Career Objective:([^#]+)'
-        ]
-        
-        for pattern in summary_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['summary'] = match.group(1).strip()
-                break
-        
-        # Hobbies extraction
-        hobbies_patterns = [
-            r'Hobbies:([^#]+)',
-            r'Interests:([^#]+)'
-        ]
-        
-        for pattern in hobbies_patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                data['hobbies'] = match.group(1).strip()
-                break
-        
-        return data
-    except Exception as e:
-        print(f"Debug: Error in resume data extraction: {str(e)}")
-        print(f"Debug: Full error details: {traceback.format_exc()}")
-        return data
 
-def extract_text_from_pdf(file):
-    try:
-        # Save the file temporarily
-        temp_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp.pdf')
-        file.save(temp_path)
-        
-        # Read the PDF
-        with open(temp_path, 'rb') as f:
-            pdf_reader = PyPDF2.PdfReader(f)
-            text = ""
-            for page in pdf_reader.pages:
-                text += page.extract_text()
-        
-        # Clean up
-        os.remove(temp_path)
-        return text
-    except Exception as e:
-        print(f"Debug: Error in PDF extraction: {str(e)}")
-        print(f"Debug: Full error details: {traceback.format_exc()}")
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-        raise
+    # Calculate ATC score
+    data['atc_score'] = calculate_atc_score(data)
 
-def extract_text_from_docx(file):
-    try:
-        # Save the file temporarily
-        temp_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp.docx')
-        file.save(temp_path)
-        
-        # Read the DOCX
-        doc = docx.Document(temp_path)
-        text = ""
-        for paragraph in doc.paragraphs:
-            text += paragraph.text + "\n"
-        
-        # Clean up
-        os.remove(temp_path)
-        return text
-    except Exception as e:
-        print(f"Debug: Error in DOCX extraction: {str(e)}")
-        print(f"Debug: Full error details: {traceback.format_exc()}")
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-        raise
-
-def generate_csv(resumes_data):
-    """Generate a CSV string from the resumes data."""
-    fieldnames = [
-        'name', 'email', 'phone', 'dob', 'city', 'state', 'country', 
-        'address', 'education', 'skills', 'experience', 'work_experience',
-        'languages', 'certifications', 'projects', 'summary', 'hobbies',
-        'references', 'volunteer_experience', 'achievements', 'publications',
-        'atc_score'
-    ]
-    
-    output = io.StringIO()
-    writer = csv.DictWriter(output, fieldnames=fieldnames)
-    
-    writer.writeheader()
-    for resume_data in resumes_data:
-        # Create a new dictionary with only the fields we want
-        row = {field: resume_data['data'].get(field, '') for field in fieldnames[:-1]}  # Exclude atc_score
-        row['atc_score'] = resume_data['atc_score']['total']
-        writer.writerow(row)
-    
-    return output.getvalue()
+    return data
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Check if files were uploaded
-        if 'files[]' not in request.files:
-            print("Debug: No files[] in request.files")
-            return render_template('index.html', error='No file part')
+        if 'resumes' not in request.files:
+            return render_template('index.html', data=[], error='No file part')
         
-        files = request.files.getlist('files[]')
-        print(f"Debug: Number of files received: {len(files)}")
+        files = request.files.getlist('resumes')
+        if not files or files[0].filename == '':
+            return render_template('index.html', data=[], error='No selected file')
         
-        # Check if any file was selected
-        if not files or all(file.filename == '' for file in files):
-            print("Debug: No files selected or all filenames empty")
-            return render_template('index.html', error='No file selected')
-        
-        resumes_data = []
-        success_messages = []
-        
+        results = []
+        errors = []
         for file in files:
-            if file and file.filename != '':
-                filename = secure_filename(file.filename)
-                file_ext = os.path.splitext(filename)[1].lower()
-                print(f"Debug: Processing file: {filename} with extension: {file_ext}")
-                
-                if file_ext not in ['.pdf', '.docx']:
-                    print(f"Debug: Skipping file {filename} - unsupported extension")
-                    continue
-                
-                try:
-                    # Extract text based on file type
-                    if file_ext == '.pdf':
-                        print(f"Debug: Extracting text from PDF: {filename}")
-                        text = extract_text_from_pdf(file)
-                    else:
-                        print(f"Debug: Extracting text from DOCX: {filename}")
-                        text = extract_text_from_docx(file)
-                    
-                    if not text.strip():
-                        print(f"Debug: No text extracted from {filename}")
-                        continue
-                    
-                    print(f"Debug: Extracted text length: {len(text)} characters")
-                    
-                    # Extract data and calculate ATC score
-                    print(f"Debug: Extracting resume data from: {filename}")
-                    data = extract_resume_data(text)
-                    print(f"Debug: Extracted data: {data}")
-                    
-                    atc_score = calculate_atc_score(data)
-                    print(f"Debug: Calculated ATC score: {atc_score}")
-                    
-                    resumes_data.append({
-                        'filename': filename,
-                        'data': data,
-                        'atc_score': atc_score
-                    })
-                    
-                    success_messages.append(f"Successfully processed: {filename}")
-                    print(f"Debug: Successfully processed: {filename}")
-                    
-                except Exception as e:
-                    print(f"Error processing {filename}: {str(e)}")
-                    print(f"Debug: Full error details: {traceback.format_exc()}")
-                    continue
+            try:
+                data = extract_resume_data(file)
+                if data:
+                    results.append(data)
+                else:
+                    errors.append(f"Failed to process {file.filename}")
+            except Exception as e:
+                errors.append(f"{file.filename}: {str(e)}")
         
-        if not resumes_data:
-            print("Debug: No resumes were successfully processed")
-            return render_template('index.html', error='Failed to process any files')
-        
-        # Generate CSV
-        print("Debug: Generating CSV file")
-        csv_data = generate_csv(resumes_data)
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        csv_filename = f'resume_data_{timestamp}.csv'
-        
-        # Save CSV to uploads folder
-        csv_path = os.path.join(app.config['UPLOAD_FOLDER'], csv_filename)
-        print(f"Debug: Saving CSV to: {csv_path}")
-        with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-            f.write(csv_data)
-        
-        return render_template('index.html', 
-                             resumes=resumes_data,
-                             success_messages=success_messages,
-                             csv_filename=csv_filename)
+        return render_template('index.html', data=results, error='; '.join(errors) if errors else None)
     
-    return render_template('index.html')
+    return render_template('index.html', data=[], error=None)
 
-@app.route('/download/<filename>')
-def download_file(filename):
-    return send_file(
-        os.path.join(app.config['UPLOAD_FOLDER'], filename),
-        as_attachment=True,
-        download_name=filename
-    )
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'})
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'})
+    
+    if file:
+        # Save the file temporarily
+        filename = secure_filename(file.filename)
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(filepath)
+        
+        try:
+            # Extract text based on file type
+            if filename.endswith('.pdf'):
+                text = read_pdf(filepath)
+            elif filename.endswith('.docx'):
+                text = read_docx(filepath)
+            else:
+                return jsonify({'error': 'Unsupported file format'})
+            
+            # Extract information
+            name = extract_name(text)
+            email = extract_email(text)
+            phone = extract_phone(text)
+            skills = extract_skills(text)
+            experience, _ = extract_experience(text)
+            city = extract_city(text)
+            
+            # Save experience data
+            if experience:
+                save_experience_data(experience)
+            
+            # Clean up the uploaded file
+            os.remove(filepath)
+            
+            return jsonify({
+                'name': name,
+                'email': email,
+                'phone': phone,
+                'skills': skills,
+                'experience': experience,
+                'city': city
+            })
+            
+        except Exception as e:
+            # Clean up the uploaded file in case of error
+            if os.path.exists(filepath):
+                os.remove(filepath)
+            return jsonify({'error': str(e)})
+
+@app.route('/experience', methods=['GET'])
+def get_experience():
+    try:
+        filepath = os.path.join('data', 'experience_data.json')
+        if os.path.exists(filepath):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                experience_data = json.load(f)
+            return jsonify(experience_data)
+        return jsonify([])
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@app.route('/export-csv', methods=['POST'])
+def export_csv():
+    try:
+        data = request.json
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+
+        # Create a CSV file in memory
+        output = io.StringIO()
+        writer = csv.writer(output)
+        
+        # Write headers
+        writer.writerow(['Category', 'Field', 'Value'])
+        
+        # Write personal information
+        writer.writerow(['Personal Information', 'Full Name', f"{data.get('first_name', '')} {data.get('last_name', '')}"])
+        writer.writerow(['Personal Information', 'Email', data.get('email', '')])
+        writer.writerow(['Personal Information', 'Phone', data.get('phone', '')])
+        writer.writerow(['Personal Information', 'Date of Birth', data.get('dob', '')])
+        writer.writerow(['Personal Information', 'City', data.get('city', '')])
+        
+        # Write skills
+        writer.writerow(['Skills', 'All Skills', ', '.join(data.get('skills', []))])
+        
+        # Write hobbies
+        writer.writerow(['Interests', 'Hobbies', data.get('hobbies', '')])
+        
+        # Write experience
+        for exp in data.get('experience', []):
+            writer.writerow(['Experience', 'Duration', exp.get('years', '')])
+            writer.writerow(['Experience', 'Role', exp.get('domain', '')])
+        
+        # Prepare the response
+        output.seek(0)
+        return send_file(
+            io.BytesIO(output.getvalue().encode('utf-8')),
+            mimetype='text/csv',
+            as_attachment=True,
+            download_name=f'resume_data_{datetime.now().strftime("%Y%m%d_%H%M%S")}.csv'
+        )
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     print("✅ Flask server running at http://127.0.0.1:5000")

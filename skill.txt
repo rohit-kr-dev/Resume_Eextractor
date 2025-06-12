@@ -1,0 +1,137 @@
+AJAX
+AI
+Android Studio
+Ansible
+Apache Airflow
+Apache Kafka
+ASP.NET
+AWS
+Azure
+Bash
+Big Data
+Bitbucket
+Blockchain
+Bootstrap
+Burp Suite
+C
+C#
+C++
+Cassandra
+Chai
+CI/CD
+CloudFormation
+Computer Vision
+Confluence
+Cypress
+Data Mining
+Data Visualization
+Data Wrangling
+Deep Learning
+DevOps
+Django
+Docker
+DynamoDB
+Eclipse
+Edge Computing
+Elasticsearch
+Ethical Hacking
+Excel
+Express.js
+Figma
+Firebase
+Firewalls
+Flask
+Git
+GitHub
+GitLab
+Go
+Google Cloud
+Grafana
+Hadoop
+HTML
+IDS/IPS
+IntelliJ IDEA
+IoT
+JIRA
+JSON
+JSP
+JMeter
+Jenkins
+JUnit
+Java
+JavaScript
+Kali Linux
+Keras
+Kotlin
+Kubernetes
+Laravel
+Linux
+LoadRunner
+MATLAB
+ML
+MariaDB
+Metasploit
+Mocha
+MongoDB
+MySQL
+NLP
+NetBeans
+Neo4j
+Next.js
+Node.js
+Notepad++
+NumPy
+OAuth
+OWASP
+OpenCV
+Oracle
+Pandas
+Penetration Testing
+Perl
+PHP
+Postman
+PostgreSQL
+Power BI
+PowerShell
+Prometheus
+PyCharm
+PyTest
+Python
+R
+REST Assured
+RPA
+React
+Redis
+Robotic Process Automation
+Ruby
+Rust
+SASS
+SAP
+SQL
+SQLite
+Scala
+Scikit-learn
+Seaborn
+Selenium
+Shell Scripting
+Slack
+Snowflake
+SoapUI
+Spark
+Splunk
+Swift
+TAILWIND CSS
+Terraform
+TestNG
+TensorFlow
+TypeScript
+Ubuntu
+Vagrant
+Visual Studio Code
+Vue.js
+VMware
+Wireshark
+WordPress
+Xcode
+XML
+Zabbix

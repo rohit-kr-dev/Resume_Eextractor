@@ -1,0 +1,137 @@
+New York
+Los Angeles
+Chicago
+Houston
+Phoenix
+Philadelphia
+San Antonio
+San Diego
+Dallas
+San Jose
+Austin
+Jacksonville
+Fort Worth
+Columbus
+Charlotte
+San Francisco
+Indianapolis
+Seattle
+Denver
+Washington
+Boston
+El Paso
+Nashville
+Detroit
+Oklahoma City
+Portland
+Las Vegas
+Memphis
+Louisville
+Baltimore
+Milwaukee
+Albuquerque
+Tucson
+Fresno
+Sacramento
+Kansas City
+Atlanta
+Miami
+Mumbai
+Delhi
+Bangalore
+Hyderabad
+Ahmedabad
+Chennai
+Kolkata
+Surat
+Pune
+Jaipur
+Lucknow
+Kanpur
+Nagpur
+Indore
+Thane
+Bhopal
+Visakhapatnam
+Pimpri-Chinchwad
+Patna
+Vadodara
+Ghaziabad
+Ludhiana
+Agra
+Nashik
+Faridabad
+Meerut
+Rajkot
+Kalyan-Dombivli
+Vasai-Virar
+Varanasi
+Srinagar
+Aurangabad
+Dhanbad
+Amritsar
+Navi Mumbai
+Allahabad
+Ranchi
+Howrah
+Coimbatore
+Jabalpur
+Gwalior
+Vijayawada
+Jodhpur
+Madurai
+Raipur
+Kota
+Guwahati
+Chandigarh
+Solapur
+Hubli–Dharwad
+Mysore
+Tiruchirappalli
+Bareilly
+Aligarh
+Tiruppur
+Moradabad
+Jalandhar
+Bhubaneswar
+Salem
+Warangal
+Guntur
+Bhiwandi
+Saharanpur
+Gorakhpur
+Bikaner
+Amravati
+Noida 
+Bangalore
+Mysore
+Hubli
+Dharwad
+Mangalore
+Belgaum
+Gulbarga
+Bellary
+Shimoga
+Tumkur
+Raichur
+Bidar
+Hospet
+Hassan
+Mandya
+Chitradurga
+Udupi
+Kolar
+Bijapur
+Chikmagalur
+Bagalkot
+Davanagere
+Chikkaballapur
+Ramanagara
+Yadgir
+Karwar
+Sirsi
+Bhadravati
+Gadag
+Haveri
+Koppal
+Chamarajanagar 

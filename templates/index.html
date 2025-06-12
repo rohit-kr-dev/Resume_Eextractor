@@ -3,759 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Extractor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Resume Parser</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --text-primary: #1f2937;
-            --text-secondary: #4b5563;
-            --bg-primary: #f9fafb;
-            --bg-secondary: #ffffff;
-            --border-color: #e5e7eb;
-            --success-color: #059669;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.5;
-            min-height: 100vh;
-            padding: 2rem 1rem;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 2rem auto;
         }
-
-        .header {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 1.875rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .header p {
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-
+        
         .upload-section {
+            background: white;
             padding: 2rem;
-            border-bottom: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
         }
-
-        .upload-form {
+        
+        .results-section {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        
+        .resume-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .resume-header {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .file-input-wrapper {
-            position: relative;
-            border: 2px dashed var(--border-color);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .file-input-wrapper:hover {
-            border-color: var(--primary-color);
-        }
-
-        .file-input-wrapper input[type="file"] {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        .file-input-label {
-            display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
         }
-
-        .file-input-label svg {
-            width: 48px;
-            height: 48px;
-            color: var(--primary-color);
+        
+        .resume-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
         }
-
-        .submit-btn {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: var(--primary-hover);
-        }
-
-        .result-section {
-            padding: 2rem;
-        }
-
-        .result-grid {
+        
+        .resume-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
-
-        .result-card {
-            background: var(--bg-primary);
-            border-radius: 8px;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .result-card h3 {
-            color: var(--primary-color);
-            font-size: 1.125rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .result-item {
-            margin-bottom: 0.75rem;
-        }
-
-        .result-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .result-label {
-            font-weight: 500;
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .result-value {
-            color: var(--text-primary);
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-        }
-
-        .experience-list {
-            list-style: none;
-        }
-
-        .experience-item {
-            padding: 0.75rem;
-            background: white;
-            border-radius: 6px;
-            margin-bottom: 0.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                border-radius: 0;
-            }
-            
-            .header {
-                padding: 1.5rem;
-            }
-            
-            .upload-section,
-            .result-section {
-                padding: 1.5rem;
-            }
-        }
-
-        .action-btn {
-            display: inline-flex;
-            align-items: center;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        .action-btn:hover {
-            opacity: 0.9;
-        }
-
-        @media print {
-            .action-buttons {
-                display: none;
-            }
-            
-            .container {
-                box-shadow: none;
-            }
-            
-            .result-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-        }
-
-        .error-message {
-            background-color: #fee;
-            color: #c00;
+        
+        .info-section {
+            background: #f8f9fa;
             padding: 1rem;
-            margin: 1rem;
-            border-radius: 4px;
-            border: 1px solid #fcc;
+            border-radius: 8px;
+        }
+        
+        .info-section h3 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            margin-bottom: 0.5rem;
         }
-
-        .error-message i {
-            color: #c00;
+        
+        .info-item i {
+            width: 20px;
+            margin-right: 0.5rem;
+            color: #6c757d;
         }
-
-        .no-results {
+        
+        .atc-score {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .progress {
+            height: 10px;
+            margin: 0.5rem 0;
+        }
+        
+        .alert {
+            margin-bottom: 1rem;
+        }
+        
+        .download-section {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
             text-align: center;
+        }
+        
+        .custom-file-upload {
+            border: 2px dashed #6c757d;
+            border-radius: 8px;
             padding: 2rem;
-            color: #666;
-            font-style: italic;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-file-upload:hover {
+            border-color: #0d6efd;
+            background-color: #f8f9fa;
+        }
+        
+        .custom-file-upload i {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        
+        #fileList {
+            margin-top: 1rem;
+            text-align: left;
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-item i {
+            margin-right: 0.5rem;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-        <h1>Resume Extractor</h1>
-            <p>Upload your resume to extract key information</p>
-        </div>
-
         <div class="upload-section">
-            <form class="upload-form" action="/" method="POST" enctype="multipart/form-data">
-                <div class="file-input-wrapper">
-                    <input type="file" name="resume" id="resume" accept=".pdf,.docx" required>
-                    <label class="file-input-label" for="resume">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                        </svg>
-                        <span>Click to upload or drag and drop</span>
-                        <span style="font-size: 0.875rem; color: var(--text-secondary);">PDF or DOCX files only</span>
-                    </label>
-                </div>
-                <button type="submit" class="submit-btn">Extract Information</button>
-        </form>
-        </div>
-
-        {% if data %}
-        <div class="result-section">
-            <div class="action-buttons" style="margin-bottom: 1.5rem; display: flex; gap: 1rem; justify-content: flex-end;">
-                <button onclick="showFilterModal()" class="action-btn" style="background: #6b7280;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 0.5rem;">
-                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-                    </svg>
-                    Filter
-                </button>
-                <button onclick="showATCScore()" class="action-btn" style="background: var(--primary-color);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 0.5rem;">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                    </svg>
-                    ATC Score
-                </button>
-                <button onclick="window.print()" class="action-btn" style="background: var(--text-secondary);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 0.5rem;">
-                        <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
-                        <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                    </svg>
-                    Print
-                </button>
-                <button onclick="exportToCSV()" class="action-btn" style="background: var(--success-color);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 0.5rem;">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                    </svg>
-                    Export CSV
-                </button>
-            </div>
-
-            <!-- Filter Modal -->
-            <div id="filterModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
-                <div style="position: relative; background: white; width: 90%; max-width: 500px; margin: 50px auto; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <button onclick="hideFilterModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; font-size: 1.5rem;">×</button>
-                    
-                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Select Information to Extract</h2>
-                    
-                    <form id="filterForm" onsubmit="applyFilters(event)">
-                        <div style="display: grid; gap: 1rem;">
-                            <div class="filter-group">
-                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Personal Information</h3>
-                                <div style="display: grid; gap: 0.5rem;">
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="name" checked>
-                                        Full Name
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="email" checked>
-                                        Email
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="phone" checked>
-                                        Phone
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="dob" checked>
-                                        Date of Birth
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="city" checked>
-                                        City
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="filter-group">
-                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">Professional Information</h3>
-                                <div style="display: grid; gap: 0.5rem;">
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="skills" checked>
-                                        Skills
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="experience" checked>
-                                        Experience
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <input type="checkbox" name="filters" value="hobbies" checked>
-                                        Hobbies
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: flex-end;">
-                            <button type="button" onclick="hideFilterModal()" class="action-btn" style="background: var(--text-secondary);">
-                                Cancel
-                            </button>
-                            <button type="submit" class="action-btn" style="background: var(--primary-color);">
-                                Apply Filters
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- ATC Score Modal -->
-            <div id="atcScoreModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
-                <div style="position: relative; background: white; width: 90%; max-width: 600px; margin: 50px auto; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <button onclick="hideATCScore()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; font-size: 1.5rem;">×</button>
-                    
-                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">ATC Score Analysis</h2>
-                    
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <div style="font-size: 3rem; font-weight: 600; color: var(--primary-color);">
-                            {{ data.atc_score.percentage }}%
-                        </div>
-                        <div style="color: var(--text-secondary);">Overall Score</div>
-                    </div>
-
-                    <div style="display: grid; gap: 1rem;">
-                        <div class="score-item">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>Personal Information</span>
-                                <span>{{ data.atc_score.details.personal_info }}/20</span>
-                            </div>
-                            <div style="height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden;">
-                                <div style="width: {{ (data.atc_score.details.personal_info / 20) * 100 }}%; height: 100%; background: var(--primary-color);"></div>
-                            </div>
-                        </div>
-
-                        <div class="score-item">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>Skills</span>
-                                <span>{{ data.atc_score.details.skills }}/30</span>
-                            </div>
-                            <div style="height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden;">
-                                <div style="width: {{ (data.atc_score.details.skills / 30) * 100 }}%; height: 100%; background: var(--primary-color);"></div>
-                            </div>
-                        </div>
-
-                        <div class="score-item">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>Experience</span>
-                                <span>{{ data.atc_score.details.experience }}/40</span>
-                            </div>
-                            <div style="height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden;">
-                                <div style="width: {{ (data.atc_score.details.experience / 40) * 100 }}%; height: 100%; background: var(--primary-color);"></div>
-                            </div>
-                        </div>
-
-                        <div class="score-item">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>Additional Information</span>
-                                <span>{{ data.atc_score.details.additional }}/10</span>
-                            </div>
-                            <div style="height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden;">
-                                <div style="width: {{ (data.atc_score.details.additional / 10) * 100 }}%; height: 100%; background: var(--primary-color);"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="result-grid">
-                <div class="result-card" data-filter="name email phone dob city">
-                    <h3>Personal Information</h3>
-                    <div class="result-item" data-filter="name">
-                        <div class="result-label">Full Name</div>
-                        <div class="result-value">{{ data.first_name }} {{ data.last_name }}</div>
-                    </div>
-                    <div class="result-item" data-filter="email">
-                        <div class="result-label">Email</div>
-                        <div class="result-value">{{ data.email }}</div>
-                    </div>
-                    <div class="result-item" data-filter="phone">
-                        <div class="result-label">Phone</div>
-                        <div class="result-value">{{ data.phone }}</div>
-                    </div>
-                    <div class="result-item" data-filter="dob">
-                        <div class="result-label">Date of Birth</div>
-                        <div class="result-value">{{ data.dob }}</div>
-                    </div>
-                    <div class="result-item" data-filter="city">
-                        <div class="result-label">City</div>
-                        <div class="result-value">{{ data.city }}</div>
-                    </div>
-                </div>
-
-                <div class="result-card" data-filter="skills hobbies">
-                    <h3>Skills & Interests</h3>
-                    <div class="result-item" data-filter="skills">
-                        <div class="result-label">Skills</div>
-                        <div class="skills-list">
-                            {% for skill in data.skills %}
-                            <span class="skill-tag">{{ skill }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="result-item" data-filter="hobbies">
-                        <div class="result-label">Hobbies</div>
-                        <div class="result-value">{{ data.hobbies }}</div>
-                    </div>
-                </div>
-
-                <div class="result-card" data-filter="experience">
-                    <h3>Experience</h3>
-                    <ul class="experience-list">
-                        {% for exp in data.experience %}
-                        <li class="experience-item">
-                            <div class="result-label">Duration</div>
-                            <div class="result-value">{{ exp.years }}</div>
-                            <div class="result-label" style="margin-top: 0.5rem;">Role</div>
-                            <div class="result-value">{{ exp.domain }}</div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            // Initialize data variable
-            let data = {% if data %}{{ data|tojson|safe }}{% else %}null{% endif %};
+            <h2 class="text-center mb-4">Resume Parser</h2>
             
-            // Update the displayResults function
-            function displayResults(data) {
-                if (!data) {
-                    document.getElementById('results').innerHTML = '<div class="no-results">No results to display</div>';
-                    return;
-                }
-                
-                const resultsDiv = document.getElementById('results');
-                resultsDiv.innerHTML = ''; // Clear previous results
-                
-                // Create result card
-                const card = document.createElement('div');
-                card.className = 'result-card';
-                card.setAttribute('data-filters', `${data.first_name || ''} ${data.last_name || ''} ${data.email || ''} ${data.phone || ''} ${data.dob || ''} ${data.city || ''} ${(data.skills || []).join(' ')}`.toLowerCase());
-                
-                // Add content to card
-                card.innerHTML = `
-                    <div class="result-header">
-                        <h3>${data.first_name || ''} ${data.last_name || ''}</h3>
-                        <div class="result-actions">
-                            <button class="action-btn" onclick="printResume(this)">
-                                <i class="fas fa-print"></i>
-                            </button>
-                            <button class="action-btn" onclick="exportToCSV(this)">
-                                <i class="fas fa-file-csv"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="result-section">
-                        <h4><i class="fas fa-user"></i> Personal Information</h4>
-                        <div class="info-grid">
-                            ${data.email ? `
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>${data.email}</span>
-                            </div>
-                            ` : ''}
-                            ${data.phone ? `
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <span>${data.phone}</span>
-                            </div>
-                            ` : ''}
-                            ${data.dob ? `
-                            <div class="info-item">
-                                <i class="fas fa-calendar"></i>
-                                <span>${data.dob}</span>
-                            </div>
-                            ` : ''}
-                            ${data.city ? `
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>${data.city}</span>
-                            </div>
-                            ` : ''}
-                        </div>
-                    </div>
-                    
-                    ${data.skills && data.skills.length > 0 ? `
-                    <div class="result-section">
-                        <h4><i class="fas fa-tools"></i> Skills</h4>
-                        <div class="skills-list">
-                            ${data.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-                        </div>
-                    </div>
-                    ` : ''}
-                    
-                    ${data.experience && data.experience.length > 0 ? `
-                    <div class="result-section">
-                        <h4><i class="fas fa-briefcase"></i> Experience</h4>
-                        <div class="experience-list">
-                            ${data.experience.map(exp => `
-                            <div class="experience-item">
-                                <div class="experience-header">
-                                    <h5>${exp.domain || ''}</h5>
-                                    <span class="duration">${exp.years || ''} years</span>
-                                </div>
-                            </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    ` : ''}
-                    
-                    ${data.hobbies ? `
-                    <div class="result-section">
-                        <h4><i class="fas fa-heart"></i> Hobbies & Interests</h4>
-                        <p>${data.hobbies}</p>
-                    </div>
-                    ` : ''}
-                    
-                    ${data.atc_score ? `
-                    <div class="result-section atc-score">
-                        <h4><i class="fas fa-chart-line"></i> ATC Score</h4>
-                        <div class="score-container">
-                            <div class="score-circle">
-                                <span class="score">${data.atc_score.score}</span>
-                                <span class="score-label">ATC Score</span>
-                            </div>
-                            <div class="score-breakdown">
-                                ${Object.entries(data.atc_score.details).map(([key, value]) => `
-                                <div class="breakdown-item">
-                                    <span class="label">${key.replace('_', ' ').toUpperCase()}</span>
-                                    <div class="progress-bar">
-                                        <div class="progress" style="width: ${value}%"></div>
-                                    </div>
-                                    <span class="value">${value}%</span>
-                                </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
-                    ` : ''}
-                `;
-                
-                resultsDiv.appendChild(card);
-            }
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                <i class="fas fa-exclamation-circle"></i>
+                {{ error }}
+            </div>
+            {% endif %}
             
-            // Call displayResults when the page loads
-            document.addEventListener('DOMContentLoaded', function() {
-                displayResults(data);
-            });
-
-            function exportToCSV() {
-                const data = {
-                    first_name: "{{ data.first_name }}",
-                    last_name: "{{ data.last_name }}",
-                    email: "{{ data.email }}",
-                    phone: "{{ data.phone }}",
-                    dob: "{{ data.dob }}",
-                    city: "{{ data.city }}",
-                    skills: {{ data.skills | tojson }},
-                    hobbies: "{{ data.hobbies }}",
-                    experience: {{ data.experience | tojson }}
-                };
-
-                fetch('/export-csv', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.blob();
-                })
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `resume_data_${new Date().toISOString().slice(0,19).replace(/[:]/g, '')}.csv`;
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                    a.remove();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error exporting data. Please try again.');
-                });
-            }
-
-            function showATCScore() {
-                document.getElementById('atcScoreModal').style.display = 'block';
-            }
-
-            function hideATCScore() {
-                document.getElementById('atcScoreModal').style.display = 'none';
-            }
-
-            function showFilterModal() {
-                document.getElementById('filterModal').style.display = 'block';
-            }
-
-            function hideFilterModal() {
-                document.getElementById('filterModal').style.display = 'none';
-            }
-
-            function applyFilters(event) {
-                event.preventDefault();
-                const form = event.target;
-                const selectedFilters = Array.from(form.querySelectorAll('input[name="filters"]:checked')).map(input => input.value);
+            {% if success_messages %}
+            <div class="alert alert-success" role="alert">
+                <i class="fas fa-check-circle"></i>
+                {% for message in success_messages %}
+                <div>{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <form method="post" enctype="multipart/form-data" id="uploadForm">
+                <div class="mb-3">
+                    <label for="files" class="form-label">Select Resume Files</label>
+                    <input type="file" class="form-control" id="files" name="files[]" multiple accept=".pdf,.docx" required>
+                    <div class="form-text">Supported formats: PDF, DOCX</div>
+                </div>
+                <div id="fileList" class="mb-3"></div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Upload Resumes
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        {% if resumes %}
+        <div class="results-section">
+            {% for resume in resumes %}
+            <div class="resume-card">
+                <div class="resume-header">
+                    <div class="resume-title">{{ resume.filename }}</div>
+                    <div class="atc-badge">
+                        <span class="badge bg-primary">ATC Score: {{ resume.atc_score.total }}/{{ resume.atc_score.max }}</span>
+                    </div>
+                </div>
                 
-                // Get all result cards
-                const resultCards = document.querySelectorAll('.result-card');
-                
-                // Hide all result cards first
-                resultCards.forEach(card => {
-                    card.style.display = 'none';
-                });
-
-                // Show cards that match the selected filters
-                resultCards.forEach(card => {
-                    const cardFilters = card.getAttribute('data-filter').split(' ');
-                    // Check if any of the card's filters are in the selected filters
-                    if (cardFilters.some(filter => selectedFilters.includes(filter))) {
-                        card.style.display = 'block';
-                        
-                        // Hide individual items that aren't selected
-                        const items = card.querySelectorAll('.result-item');
-                        items.forEach(item => {
-                            const itemFilter = item.getAttribute('data-filter');
-                            if (itemFilter && !selectedFilters.includes(itemFilter)) {
-                                item.style.display = 'none';
-                            } else {
-                                item.style.display = 'block';
-                            }
-                        });
-                    }
-                });
-
-                hideFilterModal();
-            }
-
-            // Close modals when clicking outside
-            window.onclick = function(event) {
-                const filterModal = document.getElementById('filterModal');
-                const atcScoreModal = document.getElementById('atcScoreModal');
-                
-                if (event.target == filterModal) {
-                    filterModal.style.display = 'none';
-                }
-                if (event.target == atcScoreModal) {
-                    atcScoreModal.style.display = 'none';
-                }
-            }
-
-            // Initialize filters on page load
-            document.addEventListener('DOMContentLoaded', function() {
-                const filterForm = document.getElementById('filterForm');
-                if (filterForm) {
-                    // Trigger the filter form submission to show all items initially
-                    const event = new Event('submit');
-                    filterForm.dispatchEvent(event);
-                }
-            });
-        </script>
+                <div class="resume-content">
+                    <div class="info-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        {% if resume.data.name %}
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>{{ resume.data.name }}</span>
+                        </div>
+                        {% endif %}
+                        {% if resume.data.email %}
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>{{ resume.data.email }}</span>
+                        </div>
+                        {% endif %}
+                        {% if resume.data.phone %}
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>{{ resume.data.phone }}</span>
+                        </div>
+                        {% endif %}
+                        {% if resume.data.dob %}
+                        <div class="info-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>{{ resume.data.dob }}</span>
+                        </div>
+                        {% endif %}
+                        {% if resume.data.address %}
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>{{ resume.data.address }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        {% if resume.data.education %}
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>{{ resume.data.education }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                        {% if resume.data.experience %}
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>{{ resume.data.experience }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-tools"></i> Skills</h3>
+                        {% if resume.data.skills %}
+                        <div class="info-item">
+                            <i class="fas fa-tools"></i>
+                            <span>{{ resume.data.skills }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-chart-line"></i> ATC Score Breakdown</h3>
+                        <div class="atc-score">
+                            <div class="info-item">
+                                <i class="fas fa-user-circle"></i>
+                                <span>Personal Info: {{ resume.atc_score.personal_info }}/30</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.personal_info/30)*100 }}%"></div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Skills & Experience: {{ resume.atc_score.skills_experience }}/40</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.skills_experience/40)*100 }}%"></div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Additional Info: {{ resume.atc_score.additional_info }}/30</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: {{ (resume.atc_score.additional_info/30)*100 }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="download-section">
+            <a href="{{ url_for('download_file', filename=csv_filename) }}" class="btn btn-success">
+                <i class="fas fa-download"></i> Download CSV Report
+            </a>
+        </div>
         {% endif %}
     </div>
-
-    <!-- Add this right after the <body> tag -->
-    {% if error %}
-    <div class="error-message">
-        <i class="fas fa-exclamation-circle"></i>
-        {{ error }}
-    </div>
-    {% endif %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle file selection
+        document.getElementById('files').addEventListener('change', function(e) {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            
+            if (this.files.length > 0) {
+                const fileListContainer = document.createElement('div');
+                fileListContainer.className = 'list-group';
+                
+                Array.from(this.files).forEach(file => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'list-group-item';
+                    fileItem.innerHTML = `
+                        <i class="fas fa-file me-2"></i>
+                        ${file.name}
+                    `;
+                    fileListContainer.appendChild(fileItem);
+                });
+                
+                fileList.appendChild(fileListContainer);
+            }
+        });
+    </script>
 </body>
 </html>

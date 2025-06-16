@@ -2,8 +2,6 @@
 
 A smart **Resume Extractor web application** built with **Python and Flask**. This tool allows recruiters or companies to upload multiple resumes (PDF or DOCX), extract key candidate details, filter the data via checkboxes on the UI, and export everything into a clean CSV file. It simplifies the hiring process by automating resume parsing and structuring.
 
----
-
 ## 🔍 Key Features
 
 - ✅ Upload **multiple resumes** at once (PDF / DOCX)  
@@ -20,16 +18,12 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
   - Customize the data you want to view or export  
 - 🧾 Designed for **bulk resume processing** — saves time and manual effort  
 
----
-
 ## 🧑‍💼 Ideal For
 
 - HR Professionals & Recruiters  
 - Hiring agencies with high resume inflow  
 - Startups looking to automate screening  
 - Anyone managing candidate pipelines efficiently  
-
----
 
 ## 🛠 Tech Stack
 
@@ -40,8 +34,6 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
 | Libraries| `pdfminer`, `docx2txt`, `re`, `pandas` |
 | Output   | CSV format                   |
 
----
-
 ## 🚀 How It Works
 
 1. Upload multiple resumes (PDF or DOCX files)  
@@ -50,17 +42,14 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
 4. All extracted data is shown in a table  
 5. Click "Export" to download a structured CSV of the selected fields  
 
----
-
 ## 📂 Project Structure
 
 ```
-
-resume\_app/
+resume_app/
 │
 ├── app.py
 ├── data/
-│   └── resume\_data.csv
+│   └── resume_data.csv
 ├── uploads/
 ├── templates/
 │   └── index.html
@@ -71,10 +60,7 @@ resume\_app/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
-
-````
-
----
+```
 
 ## 💻 Installation & Usage
 
@@ -82,39 +68,32 @@ resume\_app/
    ```bash
    git clone https://github.com/rohit-kr-dev/Resume_Eextractor.git
    cd Resume_Eextractor
-````
+   ```
 
 2. **Install dependencies**:
-
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Run the Flask server**:
-
    ```bash
    python app.py
    ```
 
 4. **Open in your browser**:
-
    ```
    http://localhost:5000
    ```
-
----
 
 ## 📸 Screenshots
 
 ### 🔹 Upload & Filter Interface
 
-![Resume Extractor UI 1](screenshot1.png)
+![Resume Extractor UI 1](https://raw.githubusercontent.com/rohit-kr-dev/Resume_Eextractor/main/screenshot1.png)
 
 ### 🔹 Extracted Data Display
 
-![Resume Extractor UI 2](screenshot2.png)
-
----
+![Resume Extractor UI 2](https://raw.githubusercontent.com/rohit-kr-dev/Resume_Eextractor/main/screenshot2.png)
 
 ## 📌 Future Enhancements
 
@@ -124,27 +103,17 @@ resume\_app/
 * Dashboard with graphs & analytics
 * User login for secure access
 
----
-
 ## 📬 Contact
 
-**Developer**: Rohit Kumar P Begur
-**GitHub**: [@rohit-kr-dev](https://github.com/rohit-kr-dev)
+**Developer**: Rohit Kumar P Begur  
+**GitHub**: [@rohit-kr-dev](https://github.com/rohit-kr-dev)  
 **Email**: [rohitkumarpbegur@gmail.com](mailto:rohitkumarpbegur@gmail.com)
 
----
-
 > ⚡ Streamline your recruitment process with Resume Extractor — fast, accurate, and efficient resume data in just a few clicks!
-
----
 
 ## 📄 License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-````
-
----
 
 If you want, I can help generate a `LICENSE` file for you too.
 
@@ -154,5 +123,5 @@ Once you add this README, remember to commit and push:
 git add README.md assets/screenshot1.png assets/screenshot2.png
 git commit -m "Add detailed README with screenshots and license"
 git push origin master
-````
+```
 

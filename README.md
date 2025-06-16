@@ -31,7 +31,7 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
 | -------- | ----------------------------- |
 | Backend  | Python, Flask                 |
 | Frontend | HTML, CSS                    |
-| Libraries| `pdfminer`, `docx2txt`, `re`, `pandas` |
+| Libraries| `pdfminer`, `pdfplumber`, `python-docx`, `docx2txt`, `re`, `spacy`, `PyPDF2`, `Werkzeug`, `csv`, `io` |
 | Output   | CSV format                   |
 
 ## 🚀 How It Works
@@ -45,11 +45,12 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
 ## 📂 Project Structure
 
 ```
-resume_app/
+
+resume\_app/
 │
 ├── app.py
 ├── data/
-│   └── resume_data.csv
+│   └── resume\_data.csv
 ├── uploads/
 ├── templates/
 │   └── index.html
@@ -57,33 +58,70 @@ resume_app/
 ├── assets/
 │   ├── screenshot1.png
 │   └── screenshot2.png
-├── .gitignore
 ├── requirements.txt
+├── install\_requirements.bat
+├── install\_requirements.sh
+├── .gitignore
 ├── README.md
-```
+
+````
 
 ## 💻 Installation & Usage
+
+### 🔸 Option 1: Manual Setup
 
 1. **Clone the repository**:  
    ```bash
    git clone https://github.com/rohit-kr-dev/Resume_Eextractor.git
    cd Resume_Eextractor
-   ```
+````
 
 2. **Install dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Run the Flask server**:
+
    ```bash
    python app.py
    ```
 
 4. **Open in your browser**:
+
    ```
    http://localhost:5000
    ```
+
+---
+
+### 🔸 Option 2: Quick Setup for Windows Users
+
+Run the batch script:
+
+```bash
+install_requirements.bat
+```
+
+This will:
+
+* Create a virtual environment
+* Activate it
+* Install all required libraries
+
+---
+
+### 🔸 Option 3: Quick Setup for Linux/macOS Users
+
+Make the script executable and run:
+
+```bash
+chmod +x install_requirements.sh
+./install_requirements.sh
+```
+
+---
 
 ## 📸 Screenshots
 
@@ -105,8 +143,8 @@ resume_app/
 
 ## 📬 Contact
 
-**Developer**: Rohit Kumar P Begur  
-**GitHub**: [@rohit-kr-dev](https://github.com/rohit-kr-dev)  
+**Developer**: Rohit Kumar P Begur
+**GitHub**: [@rohit-kr-dev](https://github.com/rohit-kr-dev)
 **Email**: [rohitkumarpbegur@gmail.com](mailto:rohitkumarpbegur@gmail.com)
 
 > ⚡ Streamline your recruitment process with Resume Extractor — fast, accurate, and efficient resume data in just a few clicks!
@@ -115,13 +153,14 @@ resume_app/
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-If you want, I can help generate a `LICENSE` file for you too.
+---
 
-Once you add this README, remember to commit and push:
+## 🔁 To Push Your Changes
+
+Once you add this README and supporting scripts, commit and push:
 
 ```bash
-git add README.md assets/screenshot1.png assets/screenshot2.png
-git commit -m "Add detailed README with screenshots and license"
+git add README.md requirements.txt install_requirements.bat install_requirements.sh assets/screenshot1.png assets/screenshot2.png
+git commit -m "Add README with setup scripts and screenshots"
 git push origin master
 ```
-

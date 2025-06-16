@@ -48,7 +48,7 @@ A smart **Resume Extractor web application** built with **Python and Flask**. Th
 2. The app extracts key fields using NLP and pattern matching  
 3. Users can select which fields to display/export using checkboxes  
 4. All extracted data is shown in a table  
-5. Click “Export” to download a structured CSV of the selected fields  
+5. Click "Export" to download a structured CSV of the selected fields  
 
 ---
 
@@ -108,11 +108,11 @@ resume\_app/
 
 ### 🔹 Upload & Filter Interface
 
-![Resume Extractor UI 1](assets/screenshot1.png)
+![Resume Extractor UI 1](./assets/screenshot1.png)
 
 ### 🔹 Extracted Data Display
 
-![Resume Extractor UI 2](assets/screenshot2.png)
+![Resume Extractor UI 2](./assets/screenshot2.png)
 
 ---
 

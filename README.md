@@ -93,7 +93,7 @@ resume_app/
 
 ### 🔹 Extracted Data Display
 
-![Resume Extractor UI 2](https://github.com/rohit-kr-dev/Resume_Eextractor/blob/master/assets/screenshot1.png)
+![Resume Extractor UI 2](https://github.com/rohit-kr-dev/Resume_Eextractor/blob/master/assets/screenshot2.png)
 
 ## 📌 Future Enhancements
 

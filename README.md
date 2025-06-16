@@ -127,10 +127,12 @@ chmod +x install_requirements.sh
 
 ### 🔹 Upload & Filter Interface
 
-![Resume Extractor UI 1](https://github.com/rohit-kr-dev/Resume_Eextractor/blob/master/assets/screenshot1.png)
+![Resume Extractor UI 1](https://raw.githubusercontent.com/rohit-kr-dev/Resume_Eextractor/master/assets/screenshot1.png)
 
 ### 🔹 Extracted Data Display
-![Resume Extractor UI 2](https://github.com/rohit-kr-dev/Resume_Eextractor/blob/master/assets/screenshot2.png)
+
+![Resume Extractor UI 2](https://raw.githubusercontent.com/rohit-kr-dev/Resume_Eextractor/master/assets/screenshot2.png)
+
 
 
 ## 📌 Future Enhancements

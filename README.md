@@ -108,11 +108,11 @@ resume\_app/
 
 ### 🔹 Upload & Filter Interface
 
-![Resume Extractor UI 1](./assets/screenshot1.png)
+![Resume Extractor UI 1](screenshot1.png)
 
 ### 🔹 Extracted Data Display
 
-![Resume Extractor UI 2](./assets/screenshot2.png)
+![Resume Extractor UI 2](screenshot2.png)
 
 ---
 

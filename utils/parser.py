@@ -2,8 +2,6 @@ import pdfplumber
 import docx
 import re
 from datetime import datetime
-import os
-import json
 
 def read_pdf(file):
     with pdfplumber.open(file) as pdf:
@@ -105,7 +103,7 @@ def extract_experience(text):
     invalid_domains = {
         'phone', 'mobile', 'email', 'address', 'location', 'city', 'state', 'country',
         'pincode', 'pin code', 'postal', 'code', 'contact', 'details', 'information',
-        'resume', 'cv', 'curriculum', 'vitae', 'objective','qantum','phd' 'profile', 'about','engineer',
+        'resume', 'cv', 'curriculum', 'vitae', 'objective', 'profile', 'about'
     }
 
     month_map = {
@@ -133,8 +131,8 @@ def extract_experience(text):
             bullet_points = extract_bullet_points(section_text, 0)
             for bullet in bullet_points:
                 # Try to extract role and company from bullet point
-                role_match = re.search(r"'([A-Za-z\s,/&\-]+)'", bullet)
-                company_match = re.search(r"(?:from|in)\s+'([A-Za-z0-9\s,/&\-]+)'", bullet)
+                role_match = re.search(r'\'([A-Za-z\s,/&\-]+)\'', bullet)
+                company_match = re.search(r'(?:from|in)\s+\'([A-Za-z0-9\s,/&\-]+)\'', bullet)
                 date_match = re.search(r'from\s+([A-Za-z]{3,9}),\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current|N)\s*,?\s*(\d{4})?', bullet)
                 
                 if role_match and company_match:
@@ -189,15 +187,15 @@ def extract_experience(text):
     # Pattern for internship entries
     internship_patterns = [
         # "Internship on 'Role' in 'Company' from Month, Year – Month, Year"
-        r"Internship\s+on\s+'([A-Za-z\s,/&\-]+)'\s+in\s+'([A-Za-z0-9\s,/&\-]+)'\s+from\s+([A-Za-z]{3,9}),\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current|N)\s*,?\s*(\d{4})?",
+        r'Internship\s+on\s+\'([A-Za-z\s,/&\-]+)\'\s+in\s+\'([A-Za-z0-9\s,/&\-]+)\'\s+from\s+([A-Za-z]{3,9}),\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current|N)\s*,?\s*(\d{4})?',
         # "Working Intern as a 'Role' in 'Company'"
-        r"Working\s+Intern\s+as\s+a\s+'([A-Za-z\s,/&\-]+)'\s+in\s+'([A-Za-z0-9\s,/&\-]+)'",
+        r'Working\s+Intern\s+as\s+a\s+\'([A-Za-z\s,/&\-]+)\'\s+in\s+\'([A-Za-z0-9\s,/&\-]+)\'',
         # "Did my internship training on 'Role' from Company"
-        r"Did\s+my\s+internship\s+training\s+on\s+'([A-Za-z\s,/&\-]+)'\s+from\s+([A-Za-z0-9\s,/&\-]+)",
+        r'Did\s+my\s+internship\s+training\s+on\s+\'([A-Za-z\s,/&\-]+)\'\s+from\s+([A-Za-z0-9\s,/&\-]+)',
         # "Company Name Month Year – Month Year"
-        r"([A-Za-z0-9\s,/&\-]+)(?:\s+)([A-Za-z]{3,9})\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current)\s*(\d{4})?",
+        r'([A-Za-z0-9\s,/&\-]+)(?:\s+)([A-Za-z]{3,9})\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current)\s*(\d{4})?',
         # "Role\nCompany Month Year – Month Year"
-        r"([A-Za-z\s,/&\-]+)(?:\n)([A-Za-z0-9\s,/&\-]+)(?:\s+)([A-Za-z]{3,9})\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current)\s*(\d{4})?"
+        r'([A-Za-z\s,/&\-]+)(?:\n)([A-Za-z0-9\s,/&\-]+)(?:\s+)([A-Za-z]{3,9})\s*(\d{4})\s*(?:to|–|-)\s*([A-Za-z]{3,9}|present|current)\s*(\d{4})?'
     ]
 
     # Process internship patterns
@@ -280,19 +278,15 @@ def extract_experience(text):
             seen.add(key)
             unique_entries.append(exp)
 
-    # Save the extracted data
-    save_experience_data(unique_entries)
-
     # Format for display
     display_entries = []
     for exp in unique_entries:
         display_entries.append({
             'years': exp['duration'],
-            
             'domain': f"{exp['role']} at {exp['company']}" if exp['role'] else f"at {exp['company']}"
         })
 
-    return display_entries
+    return display_entries, unique_entries
 
 def extract_dob(text):
     match = re.search(r'(dob|date of birth)[:\s]*([\d/.-]{6,10})', text, re.IGNORECASE)
@@ -310,58 +304,6 @@ def extract_email(text):
     match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', text)
     if match:
         return match.group()
-    return ""
-
-def extract_city(text):
-    """Extract city from text using various patterns"""
-    # Load valid cities
-    valid_cities = set()
-    try:
-        with open('city.txt', 'r', encoding='utf-8') as f:
-            valid_cities = {line.strip().lower() for line in f if line.strip()}
-    except FileNotFoundError:
-        print("Warning: city.txt not found")
-    
-    # Common city patterns
-    patterns = [
-        r'Location:\s*([A-Za-z\s]+)',  # Location: format
-        r'City:\s*([A-Za-z\s]+)',      # City: format
-        r'Address:\s*[^,\n]+,\s*([A-Za-z\s]+)',  # Address format
-        r'Based in\s*([A-Za-z\s]+)',   # Based in format
-        r'Located in\s*([A-Za-z\s]+)', # Located in format
-        r'Residing in\s*([A-Za-z\s]+)', # Residing in format
-        r'Current Location:\s*([A-Za-z\s]+)', # Current Location format
-    ]
-    
-    # Try each pattern
-    for pattern in patterns:
-        matches = re.finditer(pattern, text, re.IGNORECASE)
-        for match in matches:
-            city = match.group(1).strip()
-            # Clean and validate city
-            city = re.sub(r'\s+', ' ', city)  # Remove extra spaces
-            city = city.strip()
-            
-            # Check if it's a valid city
-            if city.lower() in valid_cities:
-                return city
-    
-    # Fallback: Look for city names in the first few lines
-    lines = text.split('\n')[:10]  # Check first 10 lines
-    for line in lines:
-        words = line.split()
-        for word in words:
-            word = word.strip('.,;:()[]{}')
-            if word.lower() in valid_cities:
-                return word
-    
-    return None
-
-def extract_hobbies(text):
-    match = re.search(r'hobbies?[:\s]*([a-zA-Z, \n]+)', text, re.IGNORECASE)
-    if match:
-        hobbies = match.group(1).replace('\n', ' ').strip()
-        return hobbies
     return ""
 
 def load_valid_names(file_path='name.txt'):
@@ -413,9 +355,6 @@ def extract_resume_data(file):
     dob = extract_dob(text_lower)
     phone = extract_phone(text_lower)
     email = extract_email(text_lower)
-    city = extract_city(text_lower)
-    hobbies = extract_hobbies(text_lower)
-
     skill_list = load_skill_list()
     skills = extract_skills(text_lower, skill_list)
 
@@ -426,37 +365,5 @@ def extract_resume_data(file):
         'dob': dob,
         'phone': phone,
         'email': email,
-        'city': city,
-        'hobbies': hobbies,
         'skills': skills
     }
-
-def save_experience_data(experience_data, filename="experience_data.json"):
-    """Save experience data to a JSON file"""
-    try:
-        # Create data directory if it doesn't exist
-        os.makedirs('data', exist_ok=True)
-        filepath = os.path.join('data', filename)
-        
-        # Load existing data if file exists
-        if os.path.exists(filepath):
-            with open(filepath, 'r', encoding='utf-8') as f:
-                existing_data = json.load(f)
-        else:
-            existing_data = []
-        
-        # Add timestamp to new entries
-        for entry in experience_data:
-            entry['extracted_at'] = datetime.now().isoformat()
-        
-        # Combine existing and new data
-        combined_data = existing_data + experience_data
-        
-        # Save to file
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(combined_data, f, indent=2, ensure_ascii=False)
-        
-        return True
-    except Exception as e:
-        print(f"Error saving experience data: {str(e)}")
-        return False

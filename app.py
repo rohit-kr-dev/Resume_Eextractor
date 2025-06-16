@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify, send_file
+from flask import Flask, request, render_template, jsonify, send_file, flash, redirect, url_for # Added flash, redirect, url_for
 import pdfplumber
 import docx
 import re
@@ -6,25 +6,34 @@ from datetime import datetime
 import json
 import os
 from werkzeug.utils import secure_filename
-import PyPDF2
-import spacy
-from utils.parser import extract_name, extract_email, extract_phone, extract_skills, extract_experience, extract_city
+import PyPDF2 # This import seems unused in the provided code, consider removing if not used
+import spacy # This import seems unused in the provided code, consider removing if not used
+# from utils.parser import extract_name, extract_email, extract_phone, extract_skills, extract_experience, extract_city, extract_dob # These are defined in this file, so no need to import from utils
 import csv
 import io
 
 app = Flask(__name__)
+app.secret_key = 'your_super_secret_key_here' # ADDED: Required for flash messages. Change this to a strong, random key!
 app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'doc', 'docx'} # ADDED: Define allowed extensions
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
 # Create uploads folder if it doesn't exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+# Create data folder if it doesn't exist (for experience_data.json)
+os.makedirs('data', exist_ok=True) # ADDED: Ensure data folder exists
 
-def read_pdf(file):
-    with pdfplumber.open(file) as pdf:
+def allowed_file(filename): # ADDED: Helper function to check allowed extensions
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+def read_pdf(file_path): # Changed argument to file_path from file
+    # Ensure the file is closed properly
+    with pdfplumber.open(file_path) as pdf:
         return '\n'.join(page.extract_text() or '' for page in pdf.pages)
 
-def read_docx(file):
-    doc = docx.Document(file)
+def read_docx(file_path): # Changed argument to file_path from file
+    doc = docx.Document(file_path)
     return '\n'.join([para.text for para in doc.paragraphs])
 
 def load_names(file_path='name.txt'):
@@ -150,14 +159,17 @@ def extract_name(text):
 def save_experience_data(experience_data, filename="experience_data.json"):
     """Save experience data to a JSON file"""
     try:
-        # Create data directory if it doesn't exist
-        os.makedirs('data', exist_ok=True)
+        # Create data directory if it doesn't exist (already done at the top)
+        # os.makedirs('data', exist_ok=True)
         filepath = os.path.join('data', filename)
         
         # Load existing data if file exists
         if os.path.exists(filepath):
             with open(filepath, 'r', encoding='utf-8') as f:
-                existing_data = json.load(f)
+                try: # Added try-except for JSON decoding issues
+                    existing_data = json.load(f)
+                except json.JSONDecodeError:
+                    existing_data = [] # If file is corrupted, start fresh
         else:
             existing_data = []
         
@@ -205,7 +217,7 @@ def extract_experience(text):
     invalid_domains = {
         'phone', 'mobile', 'email', 'address', 'location', 'city', 'state', 'country',
         'pincode', 'pin code', 'postal', 'code', 'contact', 'details', 'information',
-        'resume', 'cv', 'curriculum', 'vitae', 'objective','qantum','phd' 'profile', 'about','engineer',
+        'resume', 'cv', 'curriculum', 'vitae', 'objective','qantum','phd', 'profile', 'about','engineer',
     }
 
     month_map = {
@@ -213,9 +225,9 @@ def extract_experience(text):
         'jul': 7, 'aug': 8, 'sep': 9, 'sept': 9, 'oct': 10, 'nov': 11, 'dec': 12
     }
 
-    def extract_bullet_points(text, start_pos):
+    def extract_bullet_points(text_content, start_pos): # Renamed `text` to `text_content` to avoid shadowing
         bullet_points = []
-        lines = text[start_pos:].split('\n')
+        lines = text_content[start_pos:].split('\n')
         for line in lines:
             line = line.strip()
             if line.startswith('•') or line.startswith('-'):
@@ -224,9 +236,9 @@ def extract_experience(text):
                 break
         return bullet_points
 
-    def process_internship_section(text):
+    def process_internship_section(text_content): # Renamed `text` to `text_content`
         # Find the INTERNSHIPS section
-        internship_section = re.search(r'INTERNSHIPS:.*?(?=\n\n|\Z)', text, re.DOTALL | re.IGNORECASE)
+        internship_section = re.search(r'INTERNSHIPS:.*?(?=\n\n|\Z)', text_content, re.DOTALL | re.IGNORECASE)
         if internship_section:
             section_text = internship_section.group(0)
             # Process each bullet point
@@ -284,7 +296,7 @@ def extract_experience(text):
                         })
 
     # Process the INTERNSHIPS section first
-    process_internship_section(text)
+    process_internship_section(text) # Passed original `text`
 
     # Pattern for internship entries
     internship_patterns = [
@@ -342,6 +354,9 @@ def extract_experience(text):
                     years_text = f"{years} years" if years.is_integer() else f"{years} years"
                 else:
                     years_text = "Current"
+                    start_date = None # Ensure start_date and end_date are None if not available
+                    end_date = None
+
 
                 # Clean and validate the company and role
                 company = company.strip()
@@ -356,15 +371,15 @@ def extract_experience(text):
                 # Get bullet points for description
                 match_text = match[0] if len(match) == 5 else f"{match[0]}\n{match[1]}"
                 start_pos = text.find(match_text) + len(match_text)
-                bullet_points = extract_bullet_points(text, start_pos)
+                bullet_points = extract_bullet_points(text, start_pos) # Passed original `text`
 
                 experience_entries.append({
                     'type': 'internship',
                     'role': role,
                     'company': company,
                     'duration': years_text,
-                    'start_date': start_date.isoformat() if start_month and start_year else None,
-                    'end_date': end_date.isoformat() if start_month and start_year else None,
+                    'start_date': start_date.isoformat() if start_date else None, # Use .isoformat() only if not None
+                    'end_date': end_date.isoformat() if end_date else None,     # Use .isoformat() only if not None
                     'is_current': end_month.lower() in ['present', 'current', 'n'] if start_month and start_year else True,
                     'description': '\n'.join(bullet_points) if bullet_points else None
                 })
@@ -380,8 +395,8 @@ def extract_experience(text):
             seen.add(key)
             unique_entries.append(exp)
 
-    # Save the extracted data
-    save_experience_data(unique_entries)
+    # Save the extracted data (this will append to the file)
+    # save_experience_data(unique_entries) # DEACTIVATED: We will save all data once after processing all files
 
     # Format for display
     display_entries = []
@@ -406,14 +421,6 @@ def extract_email(text):
     match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', text)
     return match.group() if match else ""
 
-def extract_city(text):
-    match = re.search(r'city[:\s]*([a-zA-Z\s]+)', text, re.IGNORECASE)
-    return match.group(1).strip() if match else ""
-
-def extract_hobbies(text):
-    match = re.search(r'hobbies?[:\s]*([a-zA-Z, \n]+)', text, re.IGNORECASE)
-    return match.group(1).replace('\n', ' ').strip() if match else ""
-
 def load_skill_list(file_path='skill.txt'):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -421,10 +428,10 @@ def load_skill_list(file_path='skill.txt'):
     except FileNotFoundError:
         return []
 
-def extract_skills(text, skills):
+def extract_skills(text, skills_list_from_file): # Renamed argument to avoid conflict
     found_skills = set()
     text = text.lower()
-    for skill in skills:
+    for skill in skills_list_from_file: # Used renamed argument
         if re.search(r'\b' + re.escape(skill) + r'\b', text):
             found_skills.add(skill)
     return list(found_skills)
@@ -439,8 +446,6 @@ def calculate_atc_score(data):
     if data.get('email'):
         score += 5
     if data.get('phone'):
-        score += 5
-    if data.get('city'):
         score += 5
     
     # Skills (30 points)
@@ -462,8 +467,6 @@ def calculate_atc_score(data):
         score += 10
     
     # Additional Information (10 points)
-    if data.get('hobbies'):
-        score += 5
     if data.get('dob'):
         score += 5
     
@@ -475,43 +478,40 @@ def calculate_atc_score(data):
         'max_score': max_score,
         'percentage': round(percentage, 1),
         'details': {
-            'personal_info': 20 if all([data.get('first_name'), data.get('last_name'), data.get('email'), data.get('phone'), data.get('city')]) else 0,
+            'personal_info': 15 if all([data.get('first_name'), data.get('last_name'), data.get('email'), data.get('phone')]) else 0,
             'skills': 30 if len(skills) >= 5 else (20 if len(skills) >= 3 else (10 if len(skills) >= 1 else 0)),
             'experience': 40 if len(experience) >= 3 else (30 if len(experience) >= 2 else (20 if len(experience) >= 1 else 0)),
-            'additional': 10 if data.get('hobbies') and data.get('dob') else (5 if data.get('hobbies') or data.get('dob') else 0)
+            'additional': 5 if data.get('dob') else 0
         }
     }
 
-def extract_resume_data(file):
-    filename = file.filename.lower()
+def extract_resume_data(file_path):
+    filename = os.path.basename(file_path).lower()
     if filename.endswith('.pdf'):
-        text = read_pdf(file)
+        text = read_pdf(file_path)
     elif filename.endswith('.docx'):
-        text = read_docx(file)
+        text = read_docx(file_path)
     else:
         raise ValueError("Unsupported file type. Please upload PDF or DOCX.")
 
     text_lower = text.lower()
 
     first_name, last_name = extract_name(text)
-    experience, _ = extract_experience(text)
+    experience = extract_experience(text)
     dob = extract_dob(text_lower)
     phone = extract_phone(text_lower)
     email = extract_email(text_lower)
-    city = extract_city(text_lower)
-    hobbies = extract_hobbies(text_lower)
     skill_list = load_skill_list()
     skills = extract_skills(text_lower, skill_list)
 
     data = {
+        'filename': os.path.basename(file_path),
         'first_name': first_name.title(),
         'last_name': last_name.title(),
         'experience': experience,
         'dob': dob,
         'phone': phone,
         'email': email,
-        'city': city,
-        'hobbies': hobbies,
         'skills': skills
     }
 
@@ -520,84 +520,59 @@ def extract_resume_data(file):
 
     return data
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def index():
-    if request.method == 'POST':
-        if 'resumes' not in request.files:
-            return render_template('index.html', data=[], error='No file part')
-        
-        files = request.files.getlist('resumes')
-        if not files or files[0].filename == '':
-            return render_template('index.html', data=[], error='No selected file')
-        
-        results = []
-        errors = []
-        for file in files:
-            try:
-                data = extract_resume_data(file)
-                if data:
-                    results.append(data)
-                else:
-                    errors.append(f"Failed to process {file.filename}")
-            except Exception as e:
-                errors.append(f"{file.filename}: {str(e)}")
-        
-        return render_template('index.html', data=results, error='; '.join(errors) if errors else None)
-    
-    return render_template('index.html', data=[], error=None)
+    return render_template('index.html', data=None, error=None, all_data=[])
 
 @app.route('/upload', methods=['POST'])
-def upload_file():
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'})
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'})
+def upload():
+    if 'files[]' not in request.files:
+        flash('No file part', 'error')
+        return redirect(url_for('index'))
     
-    if file:
-        # Save the file temporarily
-        filename = secure_filename(file.filename)
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(filepath)
-        
-        try:
-            # Extract text based on file type
-            if filename.endswith('.pdf'):
-                text = read_pdf(filepath)
-            elif filename.endswith('.docx'):
-                text = read_docx(filepath)
-            else:
-                return jsonify({'error': 'Unsupported file format'})
+    files = request.files.getlist('files[]')
+    
+    if not files or all(f.filename == '' for f in files):
+        flash('No selected file(s)', 'error')
+        return redirect(url_for('index'))
+
+    processed_resumes = []
+    all_experience_data = []
+
+    for file in files:
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             
-            # Extract information
-            name = extract_name(text)
-            email = extract_email(text)
-            phone = extract_phone(text)
-            skills = extract_skills(text)
-            experience, _ = extract_experience(text)
-            city = extract_city(text)
-            
-            # Save experience data
-            if experience:
-                save_experience_data(experience)
-            
-            # Clean up the uploaded file
-            os.remove(filepath)
-            
-            return jsonify({
-                'name': name,
-                'email': email,
-                'phone': phone,
-                'skills': skills,
-                'experience': experience,
-                'city': city
-            })
-            
-        except Exception as e:
-            # Clean up the uploaded file in case of error
-            if os.path.exists(filepath):
+            try:
+                file.save(filepath)
+                resume_data = extract_resume_data(filepath)
+                processed_resumes.append(resume_data)
+                
+                if resume_data.get('experience'):
+                    all_experience_data.extend(resume_data['experience'])
+
                 os.remove(filepath)
-            return jsonify({'error': str(e)})
+
+            except Exception as e:
+                flash(f"Error processing {filename}: {str(e)}", 'error')
+                if os.path.exists(filepath):
+                    os.remove(filepath)
+        else:
+            if file.filename:
+                flash(f"File '{file.filename}' has an unsupported extension or is malformed.", 'error')
+            else:
+                flash('An empty file was submitted.', 'error')
+
+    if all_experience_data:
+        save_experience_data(all_experience_data)
+    
+    if processed_resumes:
+        flash(f"Successfully processed {len(processed_resumes)} resume(s)!", 'success')
+        return render_template('index.html', processed_resumes=processed_resumes, all_data=processed_resumes)
+    else:
+        flash("No valid resumes were processed.", 'error')
+        return redirect(url_for('index'))
 
 @app.route('/experience', methods=['GET'])
 def get_experience():
@@ -614,45 +589,61 @@ def get_experience():
 @app.route('/export-csv', methods=['POST'])
 def export_csv():
     try:
-        data = request.json
-        if not data:
-            return jsonify({'error': 'No data provided'}), 400
+        all_resumes_data = request.json
+        if not all_resumes_data:
+            return jsonify({'error': 'No data provided for export'}), 400
 
-        # Create a CSV file in memory
         output = io.StringIO()
         writer = csv.writer(output)
-        
-        # Write headers
-        writer.writerow(['Category', 'Field', 'Value'])
-        
-        # Write personal information
-        writer.writerow(['Personal Information', 'Full Name', f"{data.get('first_name', '')} {data.get('last_name', '')}"])
-        writer.writerow(['Personal Information', 'Email', data.get('email', '')])
-        writer.writerow(['Personal Information', 'Phone', data.get('phone', '')])
-        writer.writerow(['Personal Information', 'Date of Birth', data.get('dob', '')])
-        writer.writerow(['Personal Information', 'City', data.get('city', '')])
-        
-        # Write skills
-        writer.writerow(['Skills', 'All Skills', ', '.join(data.get('skills', []))])
-        
-        # Write hobbies
-        writer.writerow(['Interests', 'Hobbies', data.get('hobbies', '')])
-        
-        # Write experience
-        for exp in data.get('experience', []):
-            writer.writerow(['Experience', 'Duration', exp.get('years', '')])
-            writer.writerow(['Experience', 'Role', exp.get('domain', '')])
-        
-        # Prepare the response
+
+        # Headers without City and Hobbies
+        headers = [
+            'Filename', 'Name', 'Email', 'Phone', 'DOB', 'Skills', 'Experience', 'ATS Score'
+        ]
+        writer.writerow(headers)
+
+        for data in all_resumes_data:
+            filename = data.get('filename', '')
+            name = f"{data.get('first_name', '')} {data.get('last_name', '')}".strip()
+            email = data.get('email', '')
+            phone = data.get('phone', '')
+            dob = data.get('dob', '')
+            skills = ', '.join(data.get('skills', []))
+            atc_percentage = data.get('atc_score', {}).get('percentage', '')
+
+            # Combine all experiences into a single string
+            experiences = data.get('experience', [])
+            if experiences:
+                exp_strings = []
+                for exp in experiences:
+                    years = exp.get('years', '')
+                    domain = exp.get('domain', '')
+                    if years and domain:
+                        exp_strings.append(f"{domain} ({years})")
+                    elif domain:
+                        exp_strings.append(domain)
+                    elif years:
+                        exp_strings.append(years)
+                experience_str = '; '.join(exp_strings)
+            else:
+                experience_str = ''
+
+            writer.writerow([
+                filename, name, email, phone, dob, skills, experience_str, f"{atc_percentage:.2f}%" if atc_percentage != '' else ''
+            ])
+
         output.seek(0)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         return send_file(
             io.BytesIO(output.getvalue().encode('utf-8')),
             mimetype='text/csv',
             as_attachment=True,
-            download_name=f'resume_data_{datetime.now().strftime("%Y%m%d_%H%M%S")}.csv'
+            download_name=f'resume_data_{timestamp}.csv'
         )
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        print(f"Error during CSV export: {e}")
+        return jsonify({'error': f'Error exporting CSV: {str(e)}'}), 500
+
 
 if __name__ == '__main__':
     print("✅ Flask server running at http://127.0.0.1:5000")

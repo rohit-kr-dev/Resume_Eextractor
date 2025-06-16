@@ -2384,7 +2384,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:48:31.371110"
+    "extracted_at": "2025-06-16T15:48:37.780208"
   },
   {
     "type": "internship",
@@ -2395,7 +2395,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:48:31.371134"
+    "extracted_at": "2025-06-16T15:48:37.780243"
   },
   {
     "type": "internship",
@@ -2406,7 +2406,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:51:27.406605"
+    "extracted_at": "2025-06-16T15:51:24.504700"
   },
   {
     "type": "internship",
@@ -2417,7 +2417,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:51:27.406710"
+    "extracted_at": "2025-06-16T15:51:24.504720"
   },
   {
     "type": "internship",
@@ -2428,7 +2428,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:51:42.506649"
+    "extracted_at": "2025-06-16T15:52:45.650805"
   },
   {
     "type": "internship",
@@ -2439,7 +2439,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:51:42.506671"
+    "extracted_at": "2025-06-16T15:52:45.650830"
   },
   {
     "type": "internship",
@@ -2450,7 +2450,7 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:52:28.030104"
+    "extracted_at": "2025-06-16T16:08:13.100368"
   },
   {
     "type": "internship",
@@ -2461,930 +2461,2456 @@
     "end_date": "2019-05-01T00:00:00",
     "is_current": false,
     "description": null,
-    "extracted_at": "2025-06-12T22:52:28.030159"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:52:36.189152"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:52:36.189169"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:07.413463"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:07.413565"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:07.885264"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:07.885278"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:20.433979"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:20.433995"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:31.168829"
-  },
+    "extracted_at": "2025-06-16T16:08:13.100395"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T16:34:12.343150"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T16:34:12.343189"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T16:37:20.523230"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T16:37:20.523249"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:37:40.505007"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:37:40.505026"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:37:40.505031"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:37:40.505034"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:37:40.505037"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:37:40.505040"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:37:40.505043"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:37:40.505046"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:37:40.505049"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:37:40.505052"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:37:40.505055"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:37:40.505057"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:37:40.505060"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:37:40.505062"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:37:40.505065"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:37:40.505067"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:37:40.505069"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:37:40.505072"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:37:40.505074"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T16:41:07.858022"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T16:41:07.858032"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:41:07.858035"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:41:07.858037"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T16:41:47.196310"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T16:41:47.196320"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:41:47.196323"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:41:47.196326"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:41:47.196328"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:41:47.196331"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:41:47.196333"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:41:47.196336"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:41:47.196338"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:41:47.196340"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:41:47.196343"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:41:47.196345"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:41:47.196348"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:41:47.196350"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:41:47.196352"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:41:47.196355"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:41:47.196357"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:41:47.196359"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:41:47.196361"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:41:47.196364"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:41:47.196366"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:41:47.196368"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:41:47.196370"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:44:24.342267"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:44:24.342277"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:44:24.342280"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:44:24.342282"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:44:24.342285"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:44:24.342287"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:44:24.342290"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:44:24.342292"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:44:24.342295"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:44:24.342297"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:44:24.342299"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:44:24.342302"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:44:24.342304"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:44:24.342306"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:44:24.342309"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:44:24.342311"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:44:24.342314"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:44:24.342316"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:44:24.342318"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:44:24.342320"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:44:24.342323"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:47:12.793622"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:47:12.793631"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:47:12.793634"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:47:12.793636"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:47:12.793638"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:47:12.793640"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:47:12.793643"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:47:12.793645"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:47:12.793647"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:47:12.793649"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:47:12.793651"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:47:12.793653"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:47:12.793655"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:47:12.793657"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:47:12.793659"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:47:12.793661"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:47:12.793663"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:47:12.793665"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:47:12.793667"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:47:12.793669"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:47:12.793670"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:51:31.940438"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:51:31.940448"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:51:31.940451"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:51:31.940454"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:51:31.940456"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:51:31.940458"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:51:31.940461"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:51:31.940463"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:51:31.940466"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:51:31.940468"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:51:31.940471"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:51:31.940473"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:51:31.940475"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:51:31.940478"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:51:31.940480"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:51:31.940482"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:51:31.940485"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:51:31.940487"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:51:31.940489"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:51:31.940491"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:51:31.940493"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:53:03.735900"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:53:03.735910"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:53:03.735913"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:53:03.735915"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:53:03.735918"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:53:03.735920"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:53:03.735923"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:53:03.735925"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:53:03.735928"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:53:03.735930"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:53:03.735933"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:53:03.735935"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:53:03.735938"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:53:03.735940"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:53:03.735942"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:53:03.735945"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:53:03.735948"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:53:03.735950"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:53:03.735952"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:53:03.735954"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:53:03.735957"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:54:34.527307"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:54:34.527320"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:54:34.527323"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:54:34.527324"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:54:34.527326"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:54:34.527327"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:54:34.527330"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:54:34.527331"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:54:34.527333"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:54:34.527336"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:54:34.527338"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:54:34.527340"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:54:34.527342"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:54:34.527344"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:54:34.527345"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:54:34.527347"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:54:34.527348"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:54:34.527350"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:54:34.527352"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:54:34.527353"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:54:34.527355"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:56:31.536253"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:56:31.536271"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:56:31.536274"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:56:31.536277"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:56:31.536280"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:56:31.536283"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:56:31.536285"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:56:31.536288"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:56:31.536290"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:56:31.536293"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:56:31.536296"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:56:31.536298"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:56:31.536300"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:56:31.536303"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:56:31.536306"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:56:31.536308"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:56:31.536310"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:56:31.536313"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:56:31.536315"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:56:31.536317"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:56:31.536320"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:58:15.155328"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:58:15.155349"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:58:15.155353"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:58:15.155355"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:58:15.155358"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:58:15.155360"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:58:15.155364"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:58:15.155367"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:58:15.155370"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:58:15.155373"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:58:15.155376"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:58:15.155378"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:58:15.155381"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:58:15.155384"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:58:15.155387"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:58:15.155390"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:58:15.155392"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:58:15.155395"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:58:15.155397"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:58:15.155399"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:58:15.155402"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:59:45.906747"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T16:59:45.906756"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:59:45.906758"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:59:45.906760"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:59:45.906762"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T16:59:45.906763"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T16:59:45.906765"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T16:59:45.906767"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T16:59:45.906768"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:59:45.906770"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:59:45.906772"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:59:45.906774"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:59:45.906775"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:59:45.906777"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:59:45.906779"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T16:59:45.906780"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T16:59:45.906782"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T16:59:45.906783"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T16:59:45.906785"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T16:59:45.906786"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T16:59:45.906788"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T17:01:50.386788"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T17:01:50.386800"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T17:01:50.386803"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T17:01:50.386805"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T17:01:50.386806"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T17:01:50.386808"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T17:01:50.386811"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T17:01:50.386812"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T17:01:50.386814"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T17:01:50.386816"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T17:01:50.386818"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T17:01:50.386820"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T17:01:50.386822"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T17:01:50.386823"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T17:01:50.386825"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T17:01:50.386827"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T17:01:50.386829"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T17:01:50.386830"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T17:01:50.386832"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T17:01:50.386834"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T17:01:50.386836"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T17:05:43.790555"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T17:05:43.790572"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T17:05:43.790575"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T17:05:43.790578"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T17:05:43.790580"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T17:05:43.790583"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T17:05:43.790585"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T17:05:43.790588"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T17:05:43.790590"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T17:05:43.790593"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T17:05:43.790597"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T17:05:43.790601"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T17:05:43.790604"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T17:05:43.790607"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T17:05:43.790610"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T17:05:43.790613"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T17:05:43.790617"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T17:05:43.790620"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T17:05:43.790624"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T17:05:43.790627"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T17:05:43.790631"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T23:50:48.283179"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T23:50:48.283192"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:50:48.283195"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:50:48.283198"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:50:48.283201"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:50:48.283204"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:50:48.283206"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:50:48.283209"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:50:48.283211"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:50:48.283213"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T23:50:48.283216"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:50:48.283220"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:50:48.283227"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:50:48.283229"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:50:48.283232"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:50:48.283236"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:50:48.283239"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:50:48.283242"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:50:48.283245"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:50:48.283247"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:50:48.283249"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:50:48.283252"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:50:48.283254"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T23:54:50.753590"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T23:54:50.753599"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:54:50.753602"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:54:50.753604"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:54:50.753606"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:54:50.753608"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:54:50.753610"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:54:50.753612"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:54:50.753614"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:54:50.753616"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T23:54:50.753618"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:54:50.753620"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:54:50.753622"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:54:50.753624"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:54:50.753626"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:54:50.753628"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:54:50.753630"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:54:50.753631"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:54:50.753633"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:54:50.753635"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:54:50.753637"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:54:50.753639"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:54:50.753640"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T23:55:09.513022"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T23:55:09.513031"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:55:09.513034"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:55:09.513036"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:55:09.513038"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:55:09.513040"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:55:09.513042"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:55:09.513045"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:55:09.513047"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:55:09.513049"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T23:55:09.513050"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:55:09.513053"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:55:09.513055"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:55:09.513057"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:55:09.513059"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:55:09.513061"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:55:09.513063"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:55:09.513065"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:55:09.513067"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:55:09.513068"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:55:09.513070"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:55:09.513072"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:55:09.513074"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T23:55:19.594988"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T23:55:19.594998"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:55:19.595000"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:55:19.595002"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:55:19.595004"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:55:19.595006"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:55:19.595007"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:55:19.595009"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:55:19.595011"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:55:19.595012"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T23:55:19.595014"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:55:19.595016"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:55:19.595018"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:55:19.595020"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:55:19.595021"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:55:19.595023"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:55:19.595025"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:55:19.595026"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:55:19.595028"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:55:19.595029"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:55:19.595031"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:55:19.595033"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:55:19.595034"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-16T23:56:27.954095"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-16T23:56:27.954104"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:56:27.954106"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-16T23:56:27.954108"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:56:27.954109"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:56:27.954111"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:56:27.954113"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-16T23:56:27.954115"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-16T23:56:27.954116"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-16T23:56:27.954118"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-16T23:56:27.954119"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:56:27.954121"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:56:27.954123"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:56:27.954125"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:56:27.954126"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:56:27.954128"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:56:27.954129"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-16T23:56:27.954131"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-16T23:56:27.954133"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-16T23:56:27.954134"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-16T23:56:27.954135"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-16T23:56:27.954137"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-16T23:56:27.954139"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-17T00:00:33.189337"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-17T00:00:33.189348"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:00:33.189352"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:00:33.189355"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:00:33.189358"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:00:33.189361"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:00:33.189364"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:00:33.189367"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:00:33.189370"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:00:33.189372"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-17T00:00:33.189375"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:00:33.189378"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:00:33.189381"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:00:33.189384"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:00:33.189387"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:00:33.189390"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:00:33.189393"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:00:33.189395"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:00:33.189398"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:00:33.189401"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:00:33.189403"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:00:33.189406"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:00:33.189409"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-17T00:03:20.404489"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-17T00:03:20.404502"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:03:20.404505"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:03:20.404507"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:03:20.404508"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:03:20.404510"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:03:20.404512"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:03:20.404514"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:03:20.404515"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:03:20.404517"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-17T00:03:20.404519"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:03:20.404521"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:03:20.404522"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:03:20.404524"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:03:20.404526"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:03:20.404527"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:03:20.404529"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:03:20.404531"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:03:20.404532"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:03:20.404534"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:03:20.404535"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:03:20.404537"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:03:20.404539"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-17T00:06:15.470859"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-17T00:06:15.470881"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:06:15.470887"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:06:15.470891"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:06:15.470907"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:06:15.470921"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:06:15.470933"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:06:15.470942"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:06:15.470952"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:06:15.470962"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-17T00:06:15.470974"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:06:15.470984"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:06:15.470993"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:06:15.471006"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:06:15.471016"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:06:15.471019"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:06:15.471023"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:06:15.471026"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:06:15.471030"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:06:15.471033"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:06:15.471036"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:06:15.471041"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:06:15.471044"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-17T00:11:39.239994"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-17T00:11:39.240007"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:11:39.240011"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:11:39.240014"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:11:39.240016"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:11:39.240018"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:11:39.240021"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:11:39.240023"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:11:39.240025"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:11:39.240028"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-17T00:11:39.240030"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:11:39.240032"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:11:39.240035"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:11:39.240037"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:11:39.240040"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:11:39.240042"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:11:39.240044"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:11:39.240047"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:11:39.240049"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:11:39.240051"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:11:39.240053"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:11:39.240056"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:11:39.240058"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "at EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
+    "extracted_at": "2025-06-17T00:16:35.800841"
+  },
+  {
+    "years": "0.3 years",
+    "domain": "EDUCATION\nFlatiron School Atlanta, GA at Full Stack Developer Program",
+    "extracted_at": "2025-06-17T00:16:35.800854"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "at PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:16:35.800858"
+  },
+  {
+    "years": "9.8 years",
+    "domain": "PROFESSIONAL EXPERIENCE at BIGCOMMERCE, Austin, TX",
+    "extracted_at": "2025-06-17T00:16:35.800861"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:16:35.800864"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:16:35.800866"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:16:35.800869"
+  },
+  {
+    "years": "7.8 years",
+    "domain": "at Australia",
+    "extracted_at": "2025-06-17T00:16:35.800871"
+  },
+  {
+    "years": "3.5 years",
+    "domain": "at of Construction Management",
+    "extracted_at": "2025-06-17T00:16:35.800874"
+  },
+  {
+    "years": "3.9 years",
+    "domain": "at program",
+    "extracted_at": "2025-06-17T00:16:35.800876"
+  },
+  {
+    "years": "5.4 years",
+    "domain": "at Austin, TX and Remote",
+    "extracted_at": "2025-06-17T00:16:35.800878"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:16:35.800881"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:16:35.800883"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:16:35.800886"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:16:35.800892"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:16:35.800894"
+  },
+  {
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:16:35.800897"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at avascript Developer - Swimming",
+    "extracted_at": "2025-06-17T00:16:35.800899"
+  },
+  {
+    "years": "0.2 years",
+    "domain": "at Frontend Web Developer",
+    "extracted_at": "2025-06-17T00:16:35.800901"
+  },
+  {
+    "years": "2.2 years",
+    "domain": "at ront-End Developer",
+    "extracted_at": "2025-06-17T00:16:35.800904"
+  },
+  {
+    "years": "1.2 years",
+    "domain": "at entor and Meetup Organizer",
+    "extracted_at": "2025-06-17T00:16:35.800906"
+  },
+  {
+    "years": "0.5 years",
+    "domain": "at Facilitator",
+    "extracted_at": "2025-06-17T00:16:35.800908"
+  },
   {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:31.168845"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:41.879808"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:41.879844"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:50.878647"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T22:55:50.878666"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:45.256648"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:45.256718"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:46.878417"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:46.878434"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:50.190876"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:50.190893"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:51.850625"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:04:51.850643"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:11.042270"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:11.042286"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:12.693668"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:12.693680"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:15.637625"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:15.637642"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:17.279546"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:17.279568"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:39.882066"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:39.882085"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:41.638844"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:06:41.638861"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:52:02.873385"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-12T23:52:02.873407"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:14:23.288788"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:14:23.288803"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:14:23.873032"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:14:23.873041"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:16:46.412926"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:16:46.412934"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:16:46.978831"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:16:46.978841"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:19:12.953883"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:19:12.953895"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:19:13.541840"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:19:13.541849"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:21:42.786204"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:21:42.786216"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:21:43.425055"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:21:43.425064"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:24:24.954190"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:24:24.954200"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Australia",
-    "duration": "7.8 years",
-    "start_date": "2017-05-01T00:00:00",
-    "end_date": "2025-02-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:04.293658"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "of Construction Management",
-    "duration": "3.5 years",
-    "start_date": "2018-02-01T00:00:00",
-    "end_date": "2021-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:04.293669"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "program",
-    "duration": "3.9 years",
-    "start_date": "2009-09-01T00:00:00",
-    "end_date": "2013-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:04.293671"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Australia",
-    "duration": "7.8 years",
-    "start_date": "2017-05-01T00:00:00",
-    "end_date": "2025-02-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:16.808771"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "of Construction Management",
-    "duration": "3.5 years",
-    "start_date": "2018-02-01T00:00:00",
-    "end_date": "2021-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:16.808781"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "program",
-    "duration": "3.9 years",
-    "start_date": "2009-09-01T00:00:00",
-    "end_date": "2013-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:16.808784"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "avascript Developer - Swimming",
-    "duration": "0.2 years",
-    "start_date": "2017-01-01T00:00:00",
-    "end_date": "2017-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085528"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Frontend Web Developer",
-    "duration": "0.2 years",
-    "start_date": "2016-10-01T00:00:00",
-    "end_date": "2016-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085539"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "ront-End Developer",
-    "duration": "2.2 years",
-    "start_date": "2014-03-01T00:00:00",
-    "end_date": "2016-06-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085541"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "entor and Meetup Organizer",
-    "duration": "1.2 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2020-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085545"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Facilitator",
-    "duration": "0.5 years",
-    "start_date": "2016-02-01T00:00:00",
-    "end_date": "2016-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085547"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFreecodecamp",
-    "company": "2016 - 2017\nFull-stack web development certification\nMicroverse",
-    "duration": "0.6 years",
-    "start_date": "2019-08-01T00:00:00",
-    "end_date": "2020-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:23.085549"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:30.524589"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:30.524598"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "avascript Developer - Swimming",
-    "duration": "0.2 years",
-    "start_date": "2017-01-01T00:00:00",
-    "end_date": "2017-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052626"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Frontend Web Developer",
-    "duration": "0.2 years",
-    "start_date": "2016-10-01T00:00:00",
-    "end_date": "2016-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052635"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "ront-End Developer",
-    "duration": "2.2 years",
-    "start_date": "2014-03-01T00:00:00",
-    "end_date": "2016-06-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052637"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "entor and Meetup Organizer",
-    "duration": "1.2 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2020-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052639"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "Facilitator",
-    "duration": "0.5 years",
-    "start_date": "2016-02-01T00:00:00",
-    "end_date": "2016-08-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052641"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFreecodecamp",
-    "company": "2016 - 2017\nFull-stack web development certification\nMicroverse",
-    "duration": "0.6 years",
-    "start_date": "2019-08-01T00:00:00",
-    "end_date": "2020-03-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:25:54.052643"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:29:37.517937"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:29:37.517945"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:37:30.100364"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:37:30.100373"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:35.156374"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:35.156382"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "EDUCATION\nFlatiron School Atlanta, GA\nFull Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:53.722401"
-  },
-  {
-    "type": "internship",
-    "role": "EDUCATION\nFlatiron School Atlanta, GA",
-    "company": "Full Stack Developer Program",
-    "duration": "0.3 years",
-    "start_date": "2019-01-01T00:00:00",
-    "end_date": "2019-05-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:53.722410"
-  },
-  {
-    "type": "internship",
-    "role": "",
-    "company": "PROFESSIONAL EXPERIENCE\nBIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:54.268160"
-  },
-  {
-    "type": "internship",
-    "role": "PROFESSIONAL EXPERIENCE",
-    "company": "BIGCOMMERCE, Austin, TX",
-    "duration": "9.8 years",
-    "start_date": "2013-02-01T00:00:00",
-    "end_date": "2022-12-01T00:00:00",
-    "is_current": false,
-    "description": null,
-    "extracted_at": "2025-06-13T00:39:54.268173"
+    "years": "0.6 years",
+    "domain": "EDUCATION\nFreecodecamp at 2016 - 2017\nFull-stack web development certification\nMicroverse",
+    "extracted_at": "2025-06-17T00:16:35.800910"
   }
 ]
